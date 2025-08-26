@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dee's lucky charms Reviews Page</title>
+</head>
+
+<header>
+    <center>
+      <a href="index.html">
+        <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="150" height="150">
+      </a>
+    </center>
+
+<body>
+  <header>
+    <p>Handmade charm bracelets &amp; lucky gifts</p>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index_homepage.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="reviews-heading">
+      <header>
+        <h2 id="reviews-heading">Customer Reviews</h2>
+        <p>Read what customers say about our charms — and leave your own review below.</p>
+      </header>
+
+      <aside aria-labelledby="rating-summary">
+        <h3 id="rating-summary">Average rating</h3>
+        <p><strong>4.8</strong> out of 5 (based on 124 reviews)</p>
+      </aside>
+
+      <section aria-labelledby="leave-review-heading">
+        <header>
+          <h3 id="leave-review-heading">Leave a review</h3>
+          <p>Your honest feedback helps others and supports our small business.</p>
+        </header>
+
+        <form action="/submit-review" method="post" aria-labelledby="leave-review-heading">
+          <fieldset>
+            <legend>Reviewer details</legend>
+
+            <label for="name">Name
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </label>
+
+            <label for="email">Email (will not be published)
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Review</legend>
+
+            <label for="product">Product (optional)
+              <input id="product" name="product" type="text" placeholder="e.g. Lucky Star Bracelet" />
+            </label>
+
+            <label for="rating">Rating
+              <input id="rating" name="rating" type="number" min="1" max="5" value="5" required aria-describedby="rating-help" />
+            </label>
+            <p id="rating-help">Enter a number between 1 (lowest) and 5 (highest).</p>
+
+            <label for="comment">Your review
+              <textarea id="comment" name="comment" rows="6" required placeholder="Tell us what you loved (or what we could improve)"></textarea>
+            </label>
+
+            <label for="consent">
+              <input id="consent" name="consent" type="checkbox" required />
+              I consent to my review being published with my first name.
+            </label>
+          </fieldset>
+
+          <p>
+            <button type="submit">Submit review</button>
+            <button type="reset">Reset</button>
+          </p>
+        </form>
+      </section>
+
+      <section aria-labelledby="reviews-list-heading">
+        <header>
+          <h3 id="reviews-list-heading">Recent reviews</h3>
+        </header>
+
+        <ol>
+          <li>
+            <article aria-labelledby="r1-title">
+              <header>
+                <h4 id="r1-title">Lovely bracelet and fast delivery</h4>
+                <p><strong>By:</strong> Alice — <strong>Product:</strong> Lucky Star Bracelet</p>
+              </header>
+
+              <figure>
+                <img src="_images/HOMEPAGE IMAGE.jpg" alt="Profile photo of Alice" width="100" height="100" />
+                <figcaption>Profile photo (optional)</figcaption>
+              </figure>
+
+              <p>Absolutely love the charm quality and the packaging was so cute. The bracelet fits perfectly.</p>
+
+              <footer>
+                <p><strong>Rating:</strong> 5 / 5</p>
+                <p><time datetime="2025-08-15">15 August 2025</time></p>
+              </footer>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="r2-title">
+              <header>
+                <h4 id="r2-title">Great value</h4>
+                <p><strong>By:</strong> Thabo</p>
+              </header>
+
+              <p>Good craftsmanship, prompt replies to my questions — recommended for gifts.</p>
+
+              <footer>
+                <p><strong>Rating:</strong> 4 / 5</p>
+                <p><time datetime="2025-08-08">8 August 2025</time></p>
+              </footer>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="r3-title">
+              <header>
+                <h4 id="r3-title">Exceeded expectations</h4>
+                <p><strong>By:</strong> Priya</p>
+              </header>
+
+              <p>The charms are delicate and exactly as pictured. The seller included a handwritten note — lovely touch!</p>
+
+              <footer>
+                <p><strong>Rating:</strong> 5 / 5</p>
+                <p><time datetime="2025-07-28">28 July 2025</time></p>
+              </footer>
+            </article>
+          </li>
+        </ol>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <section aria-labelledby="contact-heading">
+      <h4 id="contact-heading">Contact</h4>
+      <address>
+        Dee's Lucky Charms — Sandton, Johannesburg<br />
+        <a href="dee@gmail.com">hello@deesluckcharms.example</a>
+      </address>
+    </section>
+
+    <p>&copy; <time datetime="2025">2025</time> Dee's Lucky Charms. All rights reserved.</p>
+  </footer>
+</body>
+</html>
