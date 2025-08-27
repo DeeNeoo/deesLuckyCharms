@@ -6,10 +6,6 @@ Dineo Tukakgomo
 ST10490306
 WEDE5020 POE Part 1
 
-//TWO HASHTAGS TO REDUCE THE HEADING FONT SIZESIZE
-
-## dEE
-
 # 3. Website goals and objectives
 
 ## Goals
