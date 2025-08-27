@@ -6,11 +6,10 @@ Dineo Tukakgomo
 ST10490306
 WEDE5020 POE Part 1
 
-//TWO HASHTAGS TO REDUCE THE HEADING FONT SIZESIZE
+# 3. Github repository link
+https://github.com/DeeNeoo/deesLuckyCharms/tree/master
 
-## dEE
-
-# 3. Website goals and objectives
+# 4. Website goals and objectives
 
 ## Goals
 Generate high-quality leads via quote requests.
@@ -27,12 +26,12 @@ Introduce loyalty discounts and referral programs to encourage repeat customers.
 Optimise SEO and social media campaigns to increase traffic and visibility.
 
 
-# 4. Key features and functionality
+# 5. Key features and functionality
 1. My website has a clear, user friendly navigation structure.
 2. Products are well shown in the products page and the have captions to captivate potential clients to buy.
 
 
-# 5. Timeline and milestones
+# 6. Timeline and milestones
 | **Milestone**            | **Date (dd/mm/yyyy)**   |
 | ------------------------ | ----------------------- |
 | Proposal Approved        | 07/08/2025              |
@@ -42,13 +41,13 @@ Optimise SEO and social media campaigns to increase traffic and visibility.
 | Final Launch             | 01/09/2025              |
 
 
-# 6. Site map
+# 7. Site map
 
 
 ![alt text](image-1.png)
 
 
-# 7. References
+# 8. References
 
 Adobe, 2023. Best practices for eCommerce UX. Adobe XD Ideas.
 
