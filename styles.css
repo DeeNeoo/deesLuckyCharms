@@ -1,0 +1,80 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    font-weight: lighter;
+    color: rgb(157, 206, 173);
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to right, rgb(240, 243, 241), rgb(247, 248, 247));
+    margin: 0;
+    padding: 0;
+    color: #010000;
+}
+
+.hero-container{
+    text-align: center;
+}
+.hero-image{
+    width: 95%;
+    height: 500px;
+}
+
+.logo{
+    display: block;
+    justify-content: left;
+    align-items: center;
+    margin-top:20px;
+}
+
+header{
+    background-color: rgba(65, 13, 3, 0.977);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /*makes the list items align horizontally*/
+    justify-content: center; /*centers the list items*/
+    gap: 50px
+
+}
+
+.header-layout{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover{
+    color: rgb(34, 96, 54);
+}
+
+footer{
+    background-color: rgba(65, 13, 3, 0.977);
+    padding: 5px;
+    text-align: center;
+}
