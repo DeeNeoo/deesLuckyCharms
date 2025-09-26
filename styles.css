@@ -12,3 +12,10 @@ body{
     color: rgb(71, 8, 8);
     background-color: rgb(246, 242, 242);
 }
+/*The typography*/
+h1, h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-style: italic ;
+    font-weight: 400;
+}
