@@ -15,15 +15,16 @@ body{
 /*The typography*/
 h1, h2{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    font-size: 4rem;
     font-style: italic ;
     font-weight: 400;
+    text-align: center;
 }
 
 p{
     font-family: monospace;
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     margin-top: 0.5rem;
     font-weight: lighter;
 }
@@ -39,6 +40,7 @@ header, main, footer{
     margin: 0;
     width: 5%;
     height: 5%;
+    margin-bottom:0.5rem ;
 
 }
 
@@ -53,21 +55,111 @@ header{
 }
 
 /*navigation*/
-nav ul{
+#topLinks ul{
     display: flex;
     justify-content: center ;
     gap: 5em;
     list-style: none;
     margin-top: 1em;
+    margin: 0;
+    padding: 0;
 }
 
-nav a{
+#topLinks a{
     color: black;
     text-decoration: none;
     font-weight: bold;
     text-transform: 0.3 ease;
 }
 
-nav a:hover{
+#topLinks a:hover{
     color: rgb(17, 66, 46);
+}
+.currentPage{
+    color:rgb(17, 66, 46);
+}
+
+header p{
+    text-align: center;
+    font-style: oblique;
+    margin-top: 0.5em;
+
+}
+
+
+main{
+    background-image: url(_images/heroShot.jpg);
+}
+
+.heroShot{
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+footer{
+    text-align: center;
+    font-size: 0,9rem;
+    color: #000;
+    padding-top: auto;
+    background-color: rgb(71, 8, 8);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#bottomLinks ul{
+    display: flex;
+    justify-content: center ;
+    gap: 5em;
+    list-style: none;
+    margin-top: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+#bottomLinks a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: 0.3 ease;
+}
+
+#bottomLinks a:hover{
+    color: rgb(17, 66, 46);
+}
+.currentPage{
+    color:rgb(17, 66, 46);
+}
+
+/*styling the bookings page*/
+#bookings{
+    background-image: none;
+}
+#bookings h1, h2 {
+    text-align: justify;
+
+}
+
+#about{
+    background-image: none;
+}
+
+#contact{
+    background-image: none;
+}
+
+#enquiry{
+    background-image: none;
+}
+
+#reviews{
+    background-image: none;
+}
+
+#products{
+    background-image: none;
+    padding-left: 25px;
 }
