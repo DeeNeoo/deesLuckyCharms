@@ -159,54 +159,70 @@ footer{
     background-image: none;
 }
 
-#products{
+#products {
     background-image: none;
-    padding-left: 25px;
-    display: flex;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Each section keeps its own heading and row of products */
+#products section {
+  display: flex;
+  flex-wrap: wrap;         /* allows wrapping if not enough space */
+  gap: 2rem;
+  justify-content: center; /* centers products under the header */
+  margin-bottom: 3rem;     /* space between sections */
+}
+
+#products section > h2 {
+  flex-basis: 100%;        /* make headings span full row */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Product cards */
+#products section > article {
+  flex: 1 1 300px;          /* flexible width with min 300px */
+  max-width: 400px;
+  background-color: #fdf6f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Images */
+#products figure img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Captions */
+#products figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Price text */
+#products p {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #2e2e2e;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  #products section {
     flex-direction: column;
-    gap: 3rem;
-    padding: 2rem;
-    max-width: 1000%;
-    margin:auto;
-}
-
-
-#products section{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-#products section > article{
-    display: inline-block;
-    vertical-align: top;
-    width: calc(50% - 1rem); /*twp products per row with spacing*/
-    margin: 0.5rem;
-    background-color: #fdf6f0;
-    padding: 1rem;
-    border-radius:10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-
-#products figure img{
+    align-items: center;
+  }
+  #products section > article {
     width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px;
+    max-width: 400px;
+  }
 }
-#products figcaption{
-    margin-top: 0.5rem;
-    font-style: italic;
-    color: #db5f5f;
-}
-#products p{
-    font-weight: bold;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #2e2e2e;
-}
-
-
-
