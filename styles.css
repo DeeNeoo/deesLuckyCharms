@@ -10,7 +10,7 @@ body{
     font-size: 1rem;
     line-height: 1.6;
     color: rgb(71, 8, 8);
-    background-color: rgb(246, 242, 242);
+    background-color: rgb(201, 241, 211);
 }
 /*The typography*/
 h1, h2{
@@ -49,8 +49,8 @@ header{
     font-style: normal;
     font-weight: bold;
     margin-top: 0.5em;
-    background-color: rgb(71, 8, 8);
-    color: #000;
+    background-color: rgb(5, 0, 0);
+    color: rgb(17, 66, 46);
     align-items: center;
 }
 
@@ -66,14 +66,14 @@ header{
 }
 
 #topLinks a{
-    color: black;
+    color: rgb(17, 66, 46);
     text-decoration: none;
     font-weight: bold;
     text-transform: 0.3 ease;
 }
 
 #topLinks a:hover{
-    color: rgb(17, 66, 46);
+    color: rgb(71, 8, 8);
 }
 .currentPage{
     color:rgb(17, 66, 46);
@@ -103,9 +103,9 @@ main{
 footer{
     text-align: center;
     font-size: 0,9rem;
-    color: #000;
+    color: rgb(17, 66, 46);
     padding-top: auto;
-    background-color: rgb(71, 8, 8);
+    background-color: rgb(2, 0, 0);
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
@@ -121,14 +121,14 @@ footer{
 }
 
 #bottomLinks a{
-    color: black;
+    color: rgb(17, 66, 46);
     text-decoration: none;
     font-weight: bold;
     text-transform: 0.3 ease;
 }
 
 #bottomLinks a:hover{
-    color: rgb(17, 66, 46);
+    color: rgb(71, 8, 8);
 }
 .currentPage{
     color:rgb(17, 66, 46);
@@ -155,9 +155,124 @@ footer{
     background-image: none;
 }
 
+
+
+
 #reviews{
     background-image: none;
 }
+
+main#reviews{
+    max-width: 56.25rem;
+    margin: auto;
+    padding: auto;
+    background-color: black;
+    border-radius: 1rem;
+}
+main#reviews h2, main#reviews h3{
+    color: rgb(17, 66, 46);
+    margin-bottom: 0.5rem;
+}
+main#reviews p{
+    margin: 0.625rem 0;
+    color: rgb(71, 8, 8)
+}
+
+aside{
+    background-color: rgb(17, 66, 46);
+    padding: 1rem;
+    margin: 1rem;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+form{
+    margin-top: 1.5rem;
+}
+
+fieldset{
+    border: 0.063rem solid rgb(201, 241, 211);
+    padding: 1rem;
+    border-radius: auto;
+}
+legend{
+    font-weight: bold;
+    color: rgb(107, 141, 127);
+    font-size: 1.125rem;
+}
+label{
+    display: block;
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+input[type="text"]
+input[type="email"]
+input[type="number"]
+textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 0.5rem;
+    border: 0.063rem solid rgb(107, 141, 127);
+    font-size: 1rem
+}
+textarea{
+    resize: vertical;
+}
+
+button{
+    padding: 0.625rem 1.25rem;
+    margin-right: 0.625;
+    background-color: rgb(107, 141, 127);
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.4s;
+}
+button:hover{
+    background-color: rgb(2, 0, 0);
+    color: rgb(107, 141, 127)
+}
+
+/*reviews list*/
+ol{
+    list-style: decimal inside;
+    margin-top: 1rem;
+}
+
+article{
+    background-color: rgb(107, 141, 127);
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+article header h4{
+    color: rgb(107, 141, 127);
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+}
+article figure{
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.625rem;
+    width: 5rem;
+    height: 5rem;
+}
+article figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+article footer p{
+    font-size: 0.875rem;
+    color: rgb(107, 141, 127);
+}
+
 
 #products {
     background-image: none;
@@ -185,10 +300,10 @@ footer{
 #products section > article {
   flex: 1 1 300px;          /* flexible width with min 300px */
   max-width: 400px;
-  background-color: #fdf6f0;
+  background-color: rgb(0, 8, 0);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(4, 50, 25, 0.1);
   text-align: center;
 }
 
@@ -204,7 +319,7 @@ footer{
 #products figcaption {
   margin-top: 0.5rem;
   font-style: italic;
-  color: #555;
+  color: rgb(17, 66, 46);
 }
 
 /* Price text */
@@ -212,7 +327,14 @@ footer{
   font-weight: bold;
   margin-top: 1rem;
   font-size: 1.1rem;
-  color: #2e2e2e;
+  color: rgb(17, 66, 46);
+}
+
+#products h3 {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: rgb(17, 66, 46);
 }
 
 /* Mobile stacking */
