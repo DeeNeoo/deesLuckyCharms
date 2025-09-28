@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +7,34 @@
 
 /*base style*/
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif  ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: rgb(71, 8, 8);
+    color: rgb(0, 0, 0);
     background-color: rgb(201, 241, 211);
+    font-weight: 900;
 }
 /*The typography*/
 h1, h2{
     font-family: 'Courier New', Courier, monospace;
     font-size: 4rem;
-    font-style: italic ;
+    font-style: italic;
     font-weight: 400;
     text-align: center;
+}
+
+#index h1{
+    font-size: 3rem;
+    position: absolute;
+    font-weight: bold;
+}
+#index h2{
+    position: absolute;
+    font-size: 2rem; 
+    margin-bottom: 1rem;
+    top: 0.5rem;
+    font-weight: bold;
+    color: rgb(17, 66, 46);
 }
 
 p{
@@ -37,30 +53,27 @@ header, main, footer{
 
 .logo{
     display: inline;
-    margin: 0;
     width: 5%;
     height: 5%;
-    margin-bottom:0.5rem ;
-
+    margin-bottom: 0.5rem;
 }
 
 header{
     text-align: center;
-    font-style: normal;
     font-weight: bold;
     margin-top: 0.5em;
     background-color: rgb(5, 0, 0);
     color: rgb(17, 66, 46);
     align-items: center;
+    padding: 1rem;
 }
 
 /*navigation*/
 #topLinks ul{
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     gap: 5em;
     list-style: none;
-    margin-top: 1em;
     margin: 0;
     padding: 0;
 }
@@ -76,46 +89,85 @@ header{
     color: rgb(71, 8, 8);
 }
 .currentPage{
-    color:rgb(17, 66, 46);
+    color: rgb(17, 66, 46);
 }
 
 header p{
     text-align: center;
     font-style: oblique;
     margin-top: 0.5em;
-
 }
-
 
 main{
     background-image: url(_images/heroShot.jpg);
+
 }
 
-.heroShot{
-    width: 100%;
-    height: 200%;
-    object-fit: cover;
-    display: block;
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 2rem;
+
+    /* background setup */
+    background: url("_images/heroShot.png") no-repeat center center / cover;
+
+    min-height: 100vh; /* full screen height */
+    color: black; /* 🔹 font color is now black */
     position: relative;
-    overflow: hidden;
 }
+
+/* optional: remove or lighten the overlay */
+.hero::before {
+    display: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.4); /* light overlay instead of dark */
+}
+
+
+.hero h1{
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+.hero p{
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    color: black;
+}
+.cta-btn{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: rgb(17, 66, 46) ;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition:  0.3 ease;
+}
+
+.cta-btn:hover{
+    background: rgb(71, 8, 8);
+}
+
+
 
 footer{
     text-align: center;
-    font-size: 0,9rem;
+    font-size: 0.9rem; /* fixed */
     color: rgb(17, 66, 46);
-    padding-top: auto;
     background-color: rgb(2, 0, 0);
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 #bottomLinks ul{
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     gap: 5em;
     list-style: none;
-    margin-top: 1em;
     margin: 0;
     padding: 0;
 }
@@ -131,54 +183,178 @@ footer{
     color: rgb(71, 8, 8);
 }
 .currentPage{
-    color:rgb(17, 66, 46);
+    color: rgb(17, 66, 46);
 }
 
-/*styling the bookings page*/
-#bookings{
+/* --------------------
+   BOOKINGS PAGE
+-------------------- */
+#bookings {
     background-image: none;
 }
-#bookings h1, h2 {
+#bookings h1, #bookings h2 {
     text-align: justify;
-
 }
 
-#about{
+/* --------------------
+   ABOUT PAGE
+-------------------- */
+#about {
     background-image: none;
 }
 
-#contact{
+/* --------------------
+   PRODUCTS PAGE
+-------------------- */
+#products {
+    background-image: none;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#products section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#products section > h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#products section > article {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: rgb(0, 8, 0);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(4, 50, 25, 0.1);
+    text-align: center;
+}
+
+#products figure img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#products figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: rgb(17, 66, 46);
+}
+
+#products p,
+#products h3 {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: rgb(17, 66, 46);
+}
+
+@media (max-width: 768px) {
+    #products section {
+        flex-direction: column;
+        align-items: center;
+    }
+    #products section > article {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* --------------------
+   CONTACT PAGE
+-------------------- */
+#contact {
     background-image: none;
 }
 
-#enquiry{
+/* --------------------
+   ENQUIRIES PAGE
+-------------------- */
+#enquiry {
+    background-image: none;
+}
+#enquiry main {
+    width: 90%;
+    max-width: 90%;
+    margin: auto;
+    padding: 1rem;
+}
+#enquiry h2 {
+    margin-bottom: 1rem;
+    color: rgb(2, 0, 0);
+    border-bottom: 0.2rem solid rgb(107, 141, 127);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+    font-size: 1.5rem;
+}
+
+#enquiry form p {
+    margin-bottom: 1rem;
+}
+#enquiry form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+#enquiry form input[type="text"],
+#enquiry form input[type="email"],
+#enquiry form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 0.1rem solid pink;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+#enquiry form input[type="submit"],
+#enquiry form input[type="reset"] {
+    background-color: rgb(17, 66, 46);
+    color: black;
+    border: none;
+    font-weight: lighter;
+    font-size: 1rem;
+    transition: background-color 0.4s ease;
+    border-radius: 1rem;
+}
+#enquiry form input[type="submit"]:hover,
+#enquiry form input[type="reset"]:hover {
+    background-color: rgb(71, 8, 8);
+}
+
+/* --------------------
+   REVIEWS PAGE
+-------------------- */
+#reviews {
     background-image: none;
 }
 
-
-
-
-#reviews{
-    background-image: none;
-}
-
-main#reviews{
+#reviews main {
     max-width: 56.25rem;
     margin: auto;
-    padding: auto;
     background-color: black;
     border-radius: 1rem;
 }
-main#reviews h2, main#reviews h3{
+#reviews h2, #reviews h3 {
     color: rgb(17, 66, 46);
     margin-bottom: 0.5rem;
 }
-main#reviews p{
+#reviews p {
     margin: 0.625rem 0;
-    color: rgb(71, 8, 8)
+    color: rgb(71, 8, 8);
 }
 
-aside{
+#reviews aside {
     background-color: rgb(17, 66, 46);
     padding: 1rem;
     margin: 1rem;
@@ -187,45 +363,45 @@ aside{
     font-size: 1.125rem;
 }
 
-form{
+#reviews form {
     margin-top: 1.5rem;
 }
 
-fieldset{
+#reviews fieldset {
     border: 0.063rem solid rgb(201, 241, 211);
     padding: 1rem;
-    border-radius: auto;
+    border-radius: 0.5rem;
 }
-legend{
+#reviews legend {
     font-weight: bold;
     color: rgb(107, 141, 127);
     font-size: 1.125rem;
 }
-label{
+#reviews label {
     display: block;
     margin-bottom: 0.625rem;
     font-weight: 500;
     font-size: 1rem;
 }
 
-input[type="text"]
-input[type="email"]
-input[type="number"]
-textarea{
+#reviews input[type="text"],
+#reviews input[type="email"],
+#reviews input[type="number"],
+#reviews textarea {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.25rem;
     border-radius: 0.5rem;
     border: 0.063rem solid rgb(107, 141, 127);
-    font-size: 1rem
+    font-size: 1rem;
 }
-textarea{
+#reviews textarea {
     resize: vertical;
 }
 
-button{
+#reviews button {
     padding: 0.625rem 1.25rem;
-    margin-right: 0.625;
+    margin-right: 0.625rem;
     background-color: rgb(107, 141, 127);
     color: black;
     border: none;
@@ -233,118 +409,39 @@ button{
     font-size: 1rem;
     transition: background-color 0.4s;
 }
-button:hover{
+#reviews button:hover {
     background-color: rgb(2, 0, 0);
-    color: rgb(107, 141, 127)
+    color: rgb(107, 141, 127);
 }
 
-/*reviews list*/
-ol{
+#reviews ol {
     list-style: decimal inside;
     margin-top: 1rem;
 }
 
-article{
+#reviews article {
     background-color: rgb(107, 141, 127);
     padding: 1rem;
     margin-bottom: 1rem;
-
 }
-
-article header h4{
+#reviews article header h4 {
     color: rgb(107, 141, 127);
     margin-bottom: 0.25rem;
     font-size: 1.125rem;
 }
-article figure{
+#reviews article figure {
     float: left;
     margin-right: 1rem;
     margin-bottom: 0.625rem;
     width: 5rem;
     height: 5rem;
 }
-article figure img{
+#reviews article figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-article footer p{
+#reviews article footer p {
     font-size: 0.875rem;
     color: rgb(107, 141, 127);
-}
-
-
-#products {
-    background-image: none;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Each section keeps its own heading and row of products */
-#products section {
-  display: flex;
-  flex-wrap: wrap;         /* allows wrapping if not enough space */
-  gap: 2rem;
-  justify-content: center; /* centers products under the header */
-  margin-bottom: 3rem;     /* space between sections */
-}
-
-#products section > h2 {
-  flex-basis: 100%;        /* make headings span full row */
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Product cards */
-#products section > article {
-  flex: 1 1 300px;          /* flexible width with min 300px */
-  max-width: 400px;
-  background-color: rgb(0, 8, 0);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(4, 50, 25, 0.1);
-  text-align: center;
-}
-
-/* Images */
-#products figure img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Captions */
-#products figcaption {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: rgb(17, 66, 46);
-}
-
-/* Price text */
-#products p {
-  font-weight: bold;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: rgb(17, 66, 46);
-}
-
-#products h3 {
-  font-weight: bold;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: rgb(17, 66, 46);
-}
-
-/* Mobile stacking */
-@media (max-width: 768px) {
-  #products section {
-    flex-direction: column;
-    align-items: center;
-  }
-  #products section > article {
-    width: 100%;
-    max-width: 400px;
-  }
 }
