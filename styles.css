@@ -213,9 +213,7 @@ main#about section{
 
 
 
-/* --------------------
-   PRODUCTS PAGE
--------------------- */
+/* Products page*/
 #products {
     background-image: none;
     padding: 2rem;
@@ -279,16 +277,32 @@ main#about section{
     }
 }
 
-/* --------------------
-   CONTACT PAGE
--------------------- */
+/* contact us page */
 #contact {
     background-image: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3rem 2rem;
+    background-color: rgb(201, 241, 211);
+    min-height: 100%;
 }
 
-/* --------------------
-   ENQUIRIES PAGE
--------------------- */
+#contact section{
+    background-color: rgb(107, 141, 127);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 4pc 12px rgb(0, 0, 0);
+    transition: transform 0.3 ease;
+}
+
+
+
+
+
+
+/* Enquiries page */
 #enquiry {
     background-image: none;
 }
