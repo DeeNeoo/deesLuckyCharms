@@ -186,22 +186,32 @@ footer{
     color: rgb(17, 66, 46);
 }
 
-/* --------------------
-   BOOKINGS PAGE
--------------------- */
-#bookings {
-    background-image: none;
-}
-#bookings h1, #bookings h2 {
-    text-align: justify;
-}
-
-/* --------------------
-   ABOUT PAGE
--------------------- */
+/* about page*/
 #about {
     background-image: none;
 }
+#about h1, #about h2 {
+    text-align: justify;
+}
+
+main#about{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+main#about section{
+    background-color: rgb(107, 141, 127);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+    transition: transform 0.3 ease;
+}
+
+
+
 
 /* --------------------
    PRODUCTS PAGE
