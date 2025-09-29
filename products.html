@@ -166,8 +166,8 @@
      <nav id="bottomLinks">
         <ul>
             <li class="currentPage">Home</li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About </a></li>
+             <li class="currentPage">Products</li>
             <li><a href="contact_us.html">Contact</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
             <li><a href="Reviews.html">Reviews</a> </li>
@@ -206,14 +206,13 @@
                 }
             });
 
-            // 2. Adjust visibility of the main product sections and their headings
+            
             productSections.forEach(section => {
                 const sectionCategory = section.getAttribute('data-category');
-                const heading = section.querySelector('h2'); // Get the section heading
+                const heading = section.querySelector('h2'); 
 
                 if (selectedCategory === 'all') {
-                    // A. When 'all' is selected:
-                    // Show the entire section (to keep all articles visible in the flow)
+                    
                     section.classList.remove('hidden-product');
                     
                     // Hide the section heading (to remove separation)

@@ -5,7 +5,6 @@
     <title>Dee's lucky charms Reviews Page</title>
     <link rel="stylesheet" href="styles.css">
 
-    
 </head>
 
 <header>
@@ -35,121 +34,72 @@
     <section aria-labelledby="reviews-heading">
       <header>
         <h2 id="reviews-heading">Customer Reviews</h2>
-        <p>Read what customers say about our charms — and leave your own review below.</p>
+        <p>Read what customers say about our charms — and leave your own review below. ✨</p>
       </header>
 
-      <aside aria-labelledby="rating-summary">
-        <h3 id="rating-summary">Average rating</h3>
-        <p><strong>4.8</strong> out of 5 (based on 124 reviews)</p>
+      <aside aria-labelledby="featured-reviews-heading" class="review-carousel-container section-style">
+        <h3 id="featured-reviews-heading">⭐ Featured Feedback ⭐</h3>
+        <div class="review-carousel" id="reviewCarousel">
+            </div>
+        <div class="carousel-nav">
+            <button id="prevReviewBtn" aria-label="Previous Review">←</button>
+            <div id="reviewIndicators" class="review-indicators">
+                </div>
+            <button id="nextReviewBtn" aria-label="Next Review">→</button>
+        </div>
       </aside>
 
-      <section aria-labelledby="leave-review-heading">
-        <header>
-          <h3 id="leave-review-heading">Leave a review</h3>
-          <p>Your honest feedback helps others and supports our small business.</p>
-        </header>
-
-        <form action="/submit-review" method="post" aria-labelledby="leave-review-heading">
-          <fieldset>
-            <legend>Reviewer details</legend>
-
-            <label for="name">Name
-              <input id="name" name="name" type="text" required placeholder="Your name" />
-            </label>
-
-            <label for="email">Email (will not be published)
-              <input id="email" name="email" type="email" required placeholder="you@example.com" />
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Review</legend>
-
-            <label for="product">Product (optional)
-              <input id="product" name="product" type="text" placeholder="e.g. Lucky Star Bracelet" />
-            </label>
-
-            <label for="rating">Rating
-              <input id="rating" name="rating" type="number" min="1" max="5" value="5" required aria-describedby="rating-help" />
-            </label>
-            <p id="rating-help">Enter a number between 1 (lowest) and 5 (highest).</p>
-
-            <label for="comment">Your review
-              <textarea id="comment" name="comment" rows="6" required placeholder="Tell us what you loved (or what we could improve)"></textarea>
-            </label>
-
-            <label for="consent">
-              <input id="consent" name="consent" type="checkbox" required />
-              I consent to my review being published with my first name.
-            </label>
-          </fieldset>
-
-          <p>
-            <button type="submit">Submit review</button>
-            <button type="reset">Reset</button>
-          </p>
-        </form>
-      </section>
-
-      <section aria-labelledby="reviews-list-heading">
-        <header>
-          <h3 id="reviews-list-heading">Recent reviews</h3>
-        </header>
-
-        <ol>
-          <li>
-            <article aria-labelledby="r1-title">
-              <header>
-                <h4 id="r1-title">Lovely bracelet and fast delivery</h4>
-                <p><strong>By:</strong> Alice — <strong>Product:</strong> Lucky Star Bracelet</p>
-              </header>
-
-              <figure>
-                <img src="_images/HOMEPAGE IMAGE.jpg" alt="Profile photo of Alice" width="100" height="100" />
-              </figure>
-
-              <p>Absolutely love the charm quality and the packaging was so cute. The bracelet fits perfectly.</p>
-
-              <footer>
-                <p><strong>Rating:</strong> 5 / 5</p>
-                <p><time datetime="2025-08-15">15 August 2025</time></p>
-              </footer>
-            </article>
+      <section aria-labelledby="all-reviews-heading" class="all-reviews-section section-style">
+        <h3 id="all-reviews-heading">All Customer Testimonials</h3>
+        <ol class="review-list">
+          <li class="review-item">
+            <p class="review-quote">"The Pink Fusion bracelet is even more beautiful in person! Great quality and it arrived so quickly. Highly recommend."</p>
+            <p class="review-author">— Sarah M.</p>
           </li>
-
-          <li>
-            <article aria-labelledby="r2-title">
-              <header>
-                <h4 id="r2-title">Great value</h4>
-                <p><strong>By:</strong> Thabo</p>
-              </header>
-
-              <p>Good craftsmanship, prompt replies to my questions — recommended for gifts.</p>
-
-              <footer>
-                <p><strong>Rating:</strong> 4 / 5</p>
-                <p><time datetime="2025-08-08">8 August 2025</time></p>
-              </footer>
-            </article>
+          <li class="review-item">
+            <p class="review-quote">"My Citrine charm feels like a little ray of sunshine. I wear it every day and always get compliments!"</p>
+            <p class="review-author">— Thembi L.</p>
           </li>
-
-          <li>
-            <article aria-labelledby="r3-title">
-              <header>
-                <h4 id="r3-title">Exceeded expectations</h4>
-                <p><strong>By:</strong> Priya</p>
-              </header>
-
-              <p>The charms are delicate and exactly as pictured. The seller included a handwritten note — lovely touch!</p>
-
-              <footer>
-                <p><strong>Rating:</strong> 5 / 5</p>
-                <p><time datetime="2025-07-28">28 July 2025</time></p>
-              </footer>
-            </article>
+          <li class="review-item">
+            <p class="review-quote">"I was skeptical about ordering jewelry online, but the Tiger's Eye bracelet is solid and the craftsmanship is superb. Fantastic value."</p>
+            <p class="review-author">— Ryan P.</p>
+          </li>
+          <li class="review-item">
+            <p class="review-quote">"Such a thoughtful gift! The packaging was gorgeous, and the charm itself is a perfect little token of luck."</p>
+            <p class="review-author">— Zola K.</p>
           </li>
         </ol>
       </section>
+      
+      <hr>
+
+      <section aria-labelledby="submit-review-heading" class="review-form-section section-style">
+        <h3 id="submit-review-heading">Leave Your Own Review!</h3>
+        <form id="reviewForm" class="review-form">
+            <p>
+                <label for="reviewerName">Your Name:</label>
+                <input type="text" id="reviewerName" name="reviewerName" required minlength="2">
+            </p>
+            <p>
+                <label>Rating (1-5 Stars):</label>
+                <div class="star-rating" role="radiogroup" aria-label="Star Rating" id="starRatingContainer">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+                </div>
+            </p>
+            <p>
+                <label for="reviewText">Your Review:</label>
+                <textarea id="reviewText" name="reviewText" rows="5" required maxlength="300"></textarea>
+                <small><span id="charCount">300</span> characters remaining.</small>
+            </p>
+            <button type="submit">Submit Review</button>
+            <div id="formMessage" class="form-message"></div>
+        </form>
+      </section>
+      
     </section>
     <br class="clearFix"> 
   </main>
@@ -158,12 +108,12 @@
 
        <nav id="bottomLinks">
         <ul>
-            <li class="currentPage">Home</li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="contact_us.html">Contact</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="Reviews.html">Reviews</a> </li>
+            <li class="currentPage">Reviews</li>
         </ul>
         </nav>
 
@@ -185,7 +135,7 @@
   
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
     
-    
+    // --- Scroll to Top Logic (Retained) ---
     window.onscroll = function() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollToTopBtn.style.display = "block";
@@ -194,11 +144,147 @@
       }
     };
     
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
     
-    scrollToTopBtn.onclick = function() {
-      document.body.scrollTop = 0; 
-      document.documentElement.scrollTop = 0; 
-    };
+    // --- Review Form Logic (UPDATED for Star Rating) ---
+    const reviewForm = document.getElementById('reviewForm');
+    const formMessage = document.getElementById('formMessage');
+    const reviewerNameInput = document.getElementById('reviewerName');
+    const reviewTextarea = document.getElementById('reviewText');
+    const charCountSpan = document.getElementById('charCount');
+    const maxChars = 300;
+    const starRatingContainer = document.getElementById('starRatingContainer');
+    const ratingInputs = document.querySelectorAll('input[name="rating"]');
+
+    // --- NEW: JS Styling & Dynamic Feedback ---
+    
+    // 1. Input Focus/Blur Styling
+    [reviewerNameInput, reviewTextarea].forEach(input => {
+        input.addEventListener('focus', () => {
+            input.classList.add('input-focused');
+        });
+        input.addEventListener('blur', () => {
+            input.classList.remove('input-focused');
+        });
+    });
+
+    // 2. Real-time Character Count
+    reviewTextarea.addEventListener('input', () => {
+        const remaining = maxChars - reviewTextarea.value.length;
+        charCountSpan.textContent = remaining;
+        
+        if (remaining < 0) {
+            charCountSpan.style.color = 'rgb(71, 8, 8)'; // Red/Maroon
+            charCountSpan.parentElement.style.fontWeight = 'bold';
+        } else if (remaining <= 50) {
+            charCountSpan.style.color = 'orange';
+            charCountSpan.parentElement.style.fontWeight = 'normal';
+        } else {
+            charCountSpan.style.color = 'rgb(17, 66, 46)'; // Dark Green
+            charCountSpan.parentElement.style.fontWeight = 'normal';
+        }
+    });
+
+    // 3. Dynamic Star Rating Feedback
+    ratingInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            // Add a class to the container when a rating is selected
+            starRatingContainer.classList.add('rating-selected');
+        });
+    });
+
+    // 4. Form Submission Logic
+    reviewForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = reviewerNameInput.value.trim();
+        const ratingInput = reviewForm.querySelector('input[name="rating"]:checked');
+        const rating = ratingInput ? parseInt(ratingInput.value) : 0;
+        const reviewText = reviewTextarea.value.trim();
+
+        if (name.length < 2 || rating === 0 || reviewText.length === 0 || reviewText.length > maxChars) {
+            formMessage.textContent = 'Please complete all fields correctly (Name, Star Rating, Review text, and check the character limit).';
+            formMessage.style.color = 'rgb(71, 8, 8)';
+            return;
+        }
+
+        // Simulate successful submission
+        formMessage.textContent = 'Thank you for your review! It has been submitted for approval.';
+        formMessage.style.color = 'rgb(17, 66, 46)';
+        reviewForm.reset(); // Clear the form
+        starRatingContainer.classList.remove('rating-selected'); // Clear JS rating styling
+        reviewTextarea.dispatchEvent(new Event('input')); // Reset character count display
+
+        // Clear message after 5 seconds
+        setTimeout(() => formMessage.textContent = '', 5000); 
+    });
+    
+    // --- Review Carousel Logic (Retained) ---
+    const reviews = [
+        { quote: "The **Pink Fusion** bracelet is even more beautiful in person! Great quality and it arrived so quickly.", author: "Sarah M." },
+        { quote: "My **Citrine charm** feels like a little ray of sunshine. I wear it every day and always get compliments!", author: "Thembi L." },
+        { quote: "The craftsmanship is superb. Fantastic value and the **Tiger's Eye** is a classic.", author: "Ryan P." },
+        { quote: "Such a thoughtful gift! The packaging was gorgeous, and the charm itself is a perfect little token of luck.", author: "Zola K." }
+    ];
+
+    let currentReviewIndex = 0;
+    const reviewCarousel = document.getElementById('reviewCarousel');
+    const prevBtn = document.getElementById('prevReviewBtn');
+    const nextBtn = document.getElementById('nextReviewBtn');
+    const indicatorContainer = document.getElementById('reviewIndicators');
+    let autoSlideInterval;
+
+    function createIndicators() {
+        reviews.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('indicator-dot');
+            dot.addEventListener('click', () => showReview(index));
+            indicatorContainer.appendChild(dot);
+        });
+    }
+
+    function showReview(index) {
+        currentReviewIndex = (index + reviews.length) % reviews.length;
+        const review = reviews[currentReviewIndex];
+
+        reviewCarousel.classList.remove('review-active');
+        
+        setTimeout(() => {
+            reviewCarousel.innerHTML = `
+                <p class="review-quote">${review.quote}</p>
+                <p class="review-author">— ${review.author}</p>
+            `;
+            reviewCarousel.classList.add('review-active');
+            
+            document.querySelectorAll('.indicator-dot').forEach((dot, i) => {
+                dot.classList.toggle('active-dot', i === currentReviewIndex);
+            });
+            
+        }, 300); 
+    }
+
+    function startAutoSlide() {
+        clearInterval(autoSlideInterval); 
+        autoSlideInterval = setInterval(() => showReview(currentReviewIndex + 1), 6000); 
+    }
+
+    prevBtn.addEventListener('click', () => {
+        showReview(currentReviewIndex - 1);
+        startAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        showReview(currentReviewIndex + 1);
+        startAutoSlide();
+    });
+
+    createIndicators();
+    showReview(0);
+    startAutoSlide();
+    reviewTextarea.dispatchEvent(new Event('input')); // Initialize count
   </script>
+
 </body>
 </html>
