@@ -43,7 +43,7 @@ Optimise SEO and social media campaigns to increase traffic and visibility.
 
 # 7. Site map
 
-![alt text](<Home page.png>)
+![alt text](heroShot-2.png)
 
 # 8.Change log
 

@@ -114,8 +114,8 @@ main{
     /* background setup */
     background: url("_images/heroShot.jpeg")no-repeat center center / cover;
 
-    min-height: 100vh; /* full screen height */
-    color: black; /* 🔹 font color is now black */
+    min-height: 100vh; 
+    color: black; 
     position: relative;
 }
 
@@ -125,7 +125,7 @@ main{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.4); /* light overlay instead of dark */
+    background: rgba(255, 255, 255, 0.4); 
 }
 
 
@@ -153,11 +153,9 @@ main{
     background: rgb(71, 8, 8);
 }
 
-
-
 footer{
     text-align: center;
-    font-size: 0.9rem; /* fixed */
+    font-size: 0.9rem; 
     color: rgb(17, 66, 46);
     background-color: rgb(2, 0, 0);
     margin: 0.5rem 0;
@@ -209,9 +207,6 @@ main#about section{
     box-shadow: 0 4px 12px rgb(0, 0, 0);
     transition: transform 0.3 ease;
 }
-
-
-
 
 /* Products page*/
 #products {
@@ -298,10 +293,6 @@ main#about section{
 }
 
 
-
-
-
-
 /* Enquiries page */
 #enquiry {
     background-image: none;
@@ -336,7 +327,7 @@ main#about section{
 #enquiry form textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 0.1rem solid pink;
+    border: 0.1rem solid rgb(107, 141, 127);
     border-radius: 0.3rem;
     font-size: 1rem;
 }
@@ -518,7 +509,7 @@ main#about section{
 }
 
 /*Desktops screens*/
-@media(mim-width:1025px){
+@media(min-width:1025px){
     body{
         font-size: 1.2rem;
     }
