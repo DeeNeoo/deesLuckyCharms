@@ -7,7 +7,7 @@ ST10490306
 WEDE5020 POE Part 1
 
 # 3. Github repository link
-https://github.com/DeeNeoo/deesLuckyCharms/tree/master
+https://github.com/DeeNeoo/deesLuckyCharms/blob/main/README.md
 
 # 4. Website goals and objectives
 
