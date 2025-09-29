@@ -99,7 +99,7 @@ header p{
 }
 
 main{
-    background-image: url(_images/heroShot.jpg);
+    background-image: url(_images/heroShot.jpeg);
 
 }
 
@@ -112,7 +112,7 @@ main{
     padding: 6rem 2rem;
 
     /* background setup */
-    background: url("_images/heroShot.png") no-repeat center center / cover;
+    background: url("_images/heroShot.jpeg")no-repeat center center / cover;
 
     min-height: 100vh; /* full screen height */
     color: black; /* 🔹 font color is now black */

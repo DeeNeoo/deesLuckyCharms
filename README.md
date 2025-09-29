@@ -43,8 +43,19 @@ Optimise SEO and social media campaigns to increase traffic and visibility.
 
 # 7. Site map
 
+![alt text](<Home page.png>)
 
-![alt text](image-1.png)
+# 8.Change log
+
+Added:
+1. An improved sitemap for better site structure and navigation.
+2. Added more content on the Contact us and Enquiries page.
+
+Changed:
+1. renamed the index_homepage.html to index.html
+2. changed the initial heroShot that I used to a new visual for the homepage.
+3. Fixed the html code, I placed the navigation code in the header section.
+
 
 
 # 8. References
@@ -102,6 +113,19 @@ Pinterest, 2025. Multicolor bracelet with lava stones and rose gold beads. [imag
 Pinterest, 2025. White howlite bracelet with metallic centerpiece. [image] Available at: https://www.pinterest.com [Accessed 22 Aug. 2025].
 
 Pinterest, 2025. White marble-style bracelet with gray veining. [image] Available at: https://www.pinterest.com [Accessed 22 Aug. 2025].
+
+
+Pinterest, 2025. Green waist beads design. [Pinterest] Available at: https://za.pinterest.com/pin/113434484358137366/ [Accessed: 20 September 2025].
+W3Schools, 2024. CSS Media Queries. [online] Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp [Accessed 20 September 2025].
+
+Mozilla Developer Network (MDN), 2024. Responsive design. [online] Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+ [Accessed 20 September 2025].
+
+Stack Overflow, 2025. Questions tagged [css-flexbox]. [online] Available at: https://stackoverflow.com/questions/tagged/css-flexbox [Accessed 20 September 2025].
+
+ChatGPT, 2025. Conversation with Dee on HTML and CSS fixes for “Dee’s Lucky Charms” website, 29 September. [online] Available at: OpenAI ChatGPT [Accessed 20 September 2025].
+
+
 
 
 
