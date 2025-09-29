@@ -63,11 +63,77 @@ Moved the navigation code into the <header> section of the HTML. This aligns the
 ###### 4. <centre> tags
 Removed the <centre> tags used to align the logo and replaced them with CSS-based alignment that allows easier styling and responsiveness.
 
+# 9.Test and iteration
+## 1. Smart phone/small screen
 
+home page:
+![top nav links](<Screenshot 2025-09-29 120510.png>)
+![main](<Screenshot 2025-09-29 120558.png>)
+![bottom nav links](<Screenshot 2025-09-29 120649.png>)
 
+products page:
+![alt text](<Screenshot 2025-09-29 120701.png>)
 
+About us page:
+![alt text](<Screenshot 2025-09-29 120717.png>)
 
-# 8. References
+Contact us page:
+![alt text](<Screenshot 2025-09-29 120738.png>)
+
+Enquiries page:
+![alt text](<Screenshot 2025-09-29 120753.png>)
+
+Reviews page:
+![alt text](<Screenshot 2025-09-29 120805.png>)
+
+## 2.Tablets or medium screens
+
+homepage:
+![alt text](<Screenshot 2025-09-29 121818.png>)
+![alt text](<Screenshot 2025-09-29 121834.png>)
+
+Products page:
+![alt text](<Screenshot 2025-09-29 121850.png>)
+
+Contact us page:
+![alt text](<Screenshot 2025-09-29 122139.png>)
+
+About us page:
+![alt text](<Screenshot 2025-09-29 122125.png>)
+
+Enquiries page:
+![alt text](<Screenshot 2025-09-29 122150.png>)
+
+Reviews page:
+![alt text](<Screenshot 2025-09-29 122202.png>)
+
+## 3. Desktop/ big screens
+
+Home page:
+![alt text](image.png)
+![alt text](image-1.png)
+
+Products page:
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+About us page:
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+Contact us page:
+![alt text](image-6.png)
+![alt text](image-7.png)
+
+Enquiries page:
+![alt text](image-8.png)
+![alt text](image-9.png)
+
+Reviews page:
+![alt text](image-10.png)
+![alt text](image-11.png)
+
+# 10. References
 
 Adobe, 2023. Best practices for eCommerce UX. Adobe XD Ideas.
 
