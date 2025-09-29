@@ -65,6 +65,8 @@ Removed the <centre> tags used to align the logo and replaced them with CSS-base
 
 
 
+
+
 # 8. References
 
 Adobe, 2023. Best practices for eCommerce UX. Adobe XD Ideas.
