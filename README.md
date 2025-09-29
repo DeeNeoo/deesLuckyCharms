@@ -47,14 +47,21 @@ Optimise SEO and social media campaigns to increase traffic and visibility.
 
 # 8.Change log
 
-Added:
-1. An improved sitemap for better site structure and navigation.
-2. Added more content on the Contact us and Enquiries page.
+#### Added
+###### 1. Sitemap:
+Added a better sitemap to make the website easier to use and navigate.  
+###### 2. Page Content:
+Added more content on the Contact us and Enquiries page. This content improves clarity for users seeking assistance or submitting quiries, ensuringbetter communucation and engagement.
 
-Changed:
-1. renamed the index_homepage.html to index.html
-2. changed the initial heroShot that I used to a new visual for the homepage.
-3. Fixed the html code, I placed the navigation code in the header section.
+#### Changed
+###### 1. Home page file:
+Renamed index_homepage.html to index.html to follow the standard namimg conventions.
+###### 2. HeroShot visual:
+Replaced the initial heroShot with a new image to create a more applealing and modern first impression on the homepage.
+###### 3. HTML structure fixes:
+Moved the navigation code into the <header> section of the HTML. This aligns the site with good semantic practices.
+###### 4. <centre> tags
+Removed the <centre> tags used to align the logo and replaced them with CSS-based alignment that allows easier styling and responsiveness.
 
 
 
@@ -125,6 +132,14 @@ Stack Overflow, 2025. Questions tagged [css-flexbox]. [online] Available at: htt
 
 ChatGPT, 2025. Conversation with Dee on HTML and CSS fixes for “Dee’s Lucky Charms” website, 29 September. [online] Available at: OpenAI ChatGPT [Accessed 20 September 2025].
 
+
+Pinterest, 2025. Black stone bracelet with seven Chakra beads [image] Available at: https://www.pinterest.com [Accessed 20 Aug. 2025].
+
+Pinterest, 2025. Hematite bracelet [image] Available at: https://www.pinterest.com [Accessed 20 Aug. 2025].
+
+Pinterest, 2025. Citrine bracelet [image] Available at: https://www.pinterest.com [Accessed 20 Aug. 2025].
+
+Pinterest, 2025. Tigers eye Bracelet [image] Available at: https://www.pinterest.com [Accessed 20 Aug. 2025].
 
 
 
