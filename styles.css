@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +67,7 @@ header{
     padding: 1rem;
 }
 
-/*navigation*/
+
 #topLinks ul{
     display: flex;
     justify-content: center;
@@ -82,14 +81,45 @@ header{
     color: rgb(17, 66, 46);
     text-decoration: none;
     font-weight: bold;
-    text-transform: 0.3 ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-#topLinks a:hover{
-    color: rgb(71, 8, 8);
-}
-.currentPage{
+/* Link states for top navigation */
+#topLinks a:link {
     color: rgb(17, 66, 46);
+    background-color: transparent;
+}
+
+#topLinks a:visited {
+    color: rgb(85, 107, 47); 
+}
+
+#topLinks a:hover {
+    color: rgb(71, 8, 8);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#topLinks a:active {
+    color: rgb(120, 15, 15);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+}
+
+#topLinks a:focus {
+    outline: 2px solid rgb(201, 241, 211);
+    outline-offset: 2px;
+    background-color: rgba(201, 241, 211, 0.2);
+}
+
+.currentPage{
+    color: rgb(201, 241, 211) !important;
+    background-color: rgb(17, 66, 46) !important;
+    font-weight: bold;
 }
 
 header p{
@@ -119,7 +149,7 @@ main{
     position: relative;
 }
 
-/* optional: remove or lighten the overlay */
+
 .hero::before {
     display: none;
     content: "";
@@ -146,20 +176,71 @@ main{
     color: white;
     border-radius: 5px;
     font-weight: bold;
-    transition:  0.3 ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+.cta-btn:link,
+.cta-btn:visited {
+    background: rgb(17, 66, 46);
+    color: white;
 }
 
 .cta-btn:hover{
     background: rgb(71, 8, 8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.cta-btn:active {
+    background: rgb(120, 15, 15);
+    transform: translateY(0);
+}
+
+.cta-btn:focus {
+    outline: 2px solid rgb(201, 241, 211);
+    outline-offset: 2px;
+}
+
+
 footer{
-    text-align: center;
+    text-align: center; 
     font-size: 0.9rem; 
     color: rgb(17, 66, 46);
     background-color: rgb(2, 0, 0);
-    margin: 0.5rem 0;
+    margin: 0.5rem auto 0; 
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
 }
+
+footer p {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: rgb(17, 66, 46);
+    margin-bottom: 0.3rem; 
+    margin-top: 0.3rem;
+    display: block; 
+    text-align: center; 
+    width: 100%;
+}
+
+
+#footer-contact-info, #footer-details {
+    text-align: center; 
+    margin: 1rem auto 0;
+}
+
+
+footer address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgb(17, 66, 46);
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
 
 #bottomLinks ul{
     display: flex;
@@ -174,38 +255,219 @@ footer{
     color: rgb(17, 66, 46);
     text-decoration: none;
     font-weight: bold;
-    text-transform: 0.3 ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+
+#bottomLinks a:link {
+    color: rgb(17, 66, 46);
+    background-color: transparent;
+}
+
+#bottomLinks a:visited {
+    color: rgb(85, 107, 47); 
 }
 
 #bottomLinks a:hover{
     color: rgb(71, 8, 8);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+#bottomLinks a:active {
+    color: rgb(120, 15, 15);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+}
+
+#bottomLinks a:focus {
+    outline: 2px solid rgb(201, 241, 211);
+    outline-offset: 2px;
+    background-color: rgba(201, 241, 211, 0.2);
+}
+
 .currentPage{
-    color: rgb(17, 66, 46);
+    color: rgb(201, 241, 211) !important;
+    background-color: rgb(17, 66, 46) !important;
+    font-weight: bold;
 }
+
+
 
 /* about page*/
 #about {
     background-image: none;
 }
-#about h1, #about h2 {
-    text-align: justify;
+main#about {
+  display: block;
+  width: 100vw;
+  padding: 2rem 0;
+  background-image: none;
 }
 
-main#about{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1000px;
-    margin: auto;
+#about section {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgb(235, 250, 240); 
+  border-left: 8px solid rgb(17, 66, 46); 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(17, 66, 46, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-main#about section{
-    background-color: rgb(107, 141, 127);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgb(0, 0, 0);
-    transition: transform 0.3 ease;
+
+#about section:hover {
+  transform: scale(1.01);
+  background-color: rgba(107, 141, 127, 0.3);
+}
+
+
+#founderQuote {
+  display: none; 
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(17, 66, 46, 0.1);
+  border-left: 5px solid rgb(17, 66, 46);
+  font-style: italic;
+  color: rgb(71, 8, 8);
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+#founderQuote p {
+  margin: 0;
+  font-weight: normal;
+}
+
+#toggleQuoteBtn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: rgb(17, 66, 46);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+#toggleQuoteBtn:hover {
+  background-color: rgb(12, 47, 33);
+}
+
+.why-choose-us-list li {
+  cursor: pointer;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.why-choose-us-list li:hover {
+  background-color: rgba(17, 66, 46, 0.1);
+}
+
+.reason-detail {
+  display: none; 
+  padding: 10px 0 10px 20px;
+  font-weight: normal;
+  font-style: italic;
+  color: #333;
+  border-top: 1px dashed #ccc;
+  margin-top: 5px;
+}
+
+.reason-detail p {
+  margin-bottom: 0;
+}
+
+
+
+#toggleQuoteBtn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: rgb(17, 66, 46);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+#toggleQuoteBtn:hover {
+  background-color: rgb(12, 47, 33);
+}
+
+/* Why Choose Us list styling */
+.why-choose-us-list {
+  padding-left: 0;
+}
+.why-choose-us-list li {
+  cursor: pointer;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  position: relative;
+}
+.why-choose-us-list li:hover {
+  background-color: rgba(17, 66, 46, 0.1);
+}
+.why-choose-us-list li::before {
+  content: "";
+  color: rgb(71, 8, 8);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.why-choose-us-list li.active-reason::before {
+  content: "➖ ";
+}
+
+/* Detail reveal block */
+.reason-detail {
+  display: none;
+  padding: 10px 0 10px 20px;
+  font-weight: normal;
+  font-style: italic;
+  color: #333;
+  border-top: 1px dashed #ccc;
+  margin-top: 5px;
+  background-color: rgba(201, 241, 211, 0.5);
+  border-left: 3px solid rgb(17, 66, 46);
+  border-radius: 3px;
+}
+.reason-detail p {
+  margin-bottom: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*Mission & Vision Highlight on Hover */
+#mission-section, #vision-section {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#mission-section:hover, #vision-section:hover {
+    transform: scale(1.02);
+    background-color: rgb(85, 107, 47); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Products page*/
@@ -292,60 +554,200 @@ main#about section{
     transition: transform 0.3 ease;
 }
 
+#contact section h2 {
+    color: rgb(71, 8, 8); 
+    border-bottom: 2px solid rgb(17, 66, 46);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#contact form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: rgb(2, 0, 0);
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea,
+#contact form select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.2rem;
+    border: 2px solid rgb(17, 66, 46);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+    background-color: rgb(235, 250, 240);
+    color: rgb(2, 0, 0);
+}
+
+#contact form textarea {
+    resize: vertical;
+}
+
+#contact form input[type="submit"],
+#contact form input[type="reset"],
+#contact form button[type="submit"] { 
+    background-color: rgb(17, 66, 46);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+#contact form input[type="submit"]:hover,
+#contact form input[type="reset"]:hover,
+#contact form button[type="submit"]:hover {
+    background-color: rgb(71, 8, 8);
+    transform: translateY(-2px);
+}
+
+/* Validation Error Message Style */
+.error-message {
+    color: rgb(160, 0, 0); 
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block; 
+    margin-top: 0.1rem;
+}
+
+
+/* 3. Scroll-to-Top Button Style */
+#scrollToTopBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 1000; 
+  border: none;
+  outline: none;
+  background-color: rgb(17, 66, 46); 
+  color: rgb(201, 241, 211);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%; 
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: rgb(85, 107, 47); 
+  transform: scale(1.05);
+}
+
+
 
 /* Enquiries page */
 #enquiry {
     background-image: none;
 }
-#enquiry main {
-    width: 90%;
-    max-width: 90%;
-    margin: auto;
-    padding: 1rem;
+#enquiry section {
+    background-color: rgb(107, 141, 127);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-width: 600px;
+    margin: 2rem auto;
 }
 #enquiry h2 {
     margin-bottom: 1rem;
     color: rgb(2, 0, 0);
-    border-bottom: 0.2rem solid rgb(107, 141, 127);
-    display: inline-block;
-    padding-bottom: 0.2rem;
+    border-bottom: 0.2rem solid rgb(17, 66, 46); 
+    display: block;
+    padding-bottom: 0.5rem;
     font-size: 1.5rem;
+    text-align: center;
 }
 
-#enquiry form p {
-    margin-bottom: 1rem;
-}
-#enquiry form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-}
 
 #enquiry form input[type="text"],
 #enquiry form input[type="email"],
+#enquiry form input[type="tel"],
+#enquiry form input[type="date"],
+#enquiry form select,
 #enquiry form textarea {
     width: 100%;
-    padding: 0.5rem;
-    border: 0.1rem solid rgb(107, 141, 127);
-    border-radius: 0.3rem;
+    padding: 0.6rem;
+    margin-top: 0.2rem;
+    border: 2px solid rgb(17, 66, 46);
+    border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box; 
+    background-color: rgb(235, 250, 240);
+    color: rgb(2, 0, 0);
+    transition: all 0.3s ease;
 }
 
-#enquiry form input[type="submit"],
+/* Form input focus states */
+#enquiry form input:focus,
+#enquiry form textarea:focus,
+#enquiry form select:focus {
+    outline: 2px solid rgb(71, 8, 8);
+    border-color: rgb(71, 8, 8);
+    box-shadow: 0 0 5px rgba(71, 8, 8, 0.5);
+}
+
+
+#enquiry form button[type="submit"],
 #enquiry form input[type="reset"] {
     background-color: rgb(17, 66, 46);
-    color: black;
+    color: white;
     border: none;
-    font-weight: lighter;
+    font-weight: bold; 
     font-size: 1rem;
-    transition: background-color 0.4s ease;
-    border-radius: 1rem;
+    transition: all 0.4s ease;
+    border-radius: 5px; 
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
 }
-#enquiry form input[type="submit"]:hover,
+
+#enquiry form button[type="submit"]:hover,
 #enquiry form input[type="reset"]:hover {
     background-color: rgb(71, 8, 8);
+    transform: translateY(-2px);
 }
+
+
+#enquiryResponse {
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgb(235, 250, 240); 
+    border: 3px solid rgb(17, 66, 46);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+}
+
+#enquiryResponse h3 {
+    color: rgb(71, 8, 8);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#enquiryResponse p {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    color: rgb(2, 0, 0);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 
 /*Reviews page */
 #reviews {
@@ -407,7 +809,18 @@ main#about section{
     border-radius: 0.5rem;
     border: 0.063rem solid rgb(107, 141, 127);
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
+
+#reviews input[type="text"]:focus,
+#reviews input[type="email"]:focus,
+#reviews input[type="number"]:focus,
+#reviews textarea:focus {
+    outline: 2px solid rgb(17, 66, 46);
+    border-color: rgb(17, 66, 46);
+    box-shadow: 0 0 5px rgba(17, 66, 46, 0.5);
+}
+
 #reviews textarea {
     resize: vertical;
 }
@@ -420,11 +833,24 @@ main#about section{
     border: none;
     font-weight: bold;
     font-size: 1rem;
-    transition: background-color 0.4s;
+    transition: all 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
 }
+
 #reviews button:hover {
     background-color: rgb(2, 0, 0);
     color: rgb(107, 141, 127);
+    transform: translateY(-2px);
+}
+
+#reviews button:active {
+    transform: translateY(0);
+}
+
+#reviews button:focus {
+    outline: 2px solid rgb(201, 241, 211);
+    outline-offset: 2px;
 }
 
 #reviews ol {
@@ -459,7 +885,211 @@ main#about section{
     color: rgb(107, 141, 127);
 }
 
-/*Responsive braekpoints */
+/* CSS for the Scroll-to-Top Button */
+#scrollToTopBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none;
+  outline: none;
+  background-color: rgb(17, 66, 46); 
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: rgb(41, 106, 76); 
+}
+
+/* NEW: Rotating Charm Suggestion Styles */
+#rotatingCharmSuggestion {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: rgb(107, 141, 127); /* Background color to make it stand out */
+    border-radius: 10px;
+    max-width: 800px; /* Constrain width for a good look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#rotatingCharmSuggestion h2 {
+    font-size: 2rem;
+    color: rgb(71, 8, 8);
+    margin-bottom: 1rem;
+}
+
+/* Flexbox container for side-by-side layout */
+#charmDetails {
+    display: flex;
+    flex-direction: row; /* Keep content and image side-by-side */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: left; /* Reset text alignment for the content */
+    padding: 10px;
+}
+
+/* Container for text content */
+.charm-text-content {
+    flex: 1; /* Allows the text to take available space */
+    order: 1; /* Text content on the left */
+    min-width: 50%;
+}
+
+/* Container for image content */
+.charm-image-content {
+    flex-shrink: 0; /* Prevents the image from shrinking too much */
+    order: 2; /* Image on the right */
+}
+
+#rotatingCharmSuggestion a.cta-btn {
+    margin-top: 1rem; 
+    margin-bottom: 0; 
+    display: inline-block;
+}
+
+/* Style for the image inside the rotating charm suggestion */
+.charm-suggestion-img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0; /* Removed margin-bottom */
+    border: 2px solid rgb(17, 66, 46);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+
+/*
+================================================================
+   Interactivity Styles (Used by JavaScript in HTML files)
+================================================================
+*/
+
+/* 1. index.html: Welcome Text Animation Classes */
+#welcomeSection { 
+    transition: all 0.5s ease-in-out; 
+}
+#welcomeSection.welcome-section-active { 
+    transform: scale(1.02); 
+}
+#introText.welcome-text-active { 
+    color: rgb(71, 8, 8); 
+    font-weight: bold; 
+}
+
+/* 2. products.html: Product Filter Styles */
+#filter-controls {
+    margin-bottom: 1.5rem; 
+    padding: 0.5rem 0; /* Reduced padding */
+    background-color: transparent; /* Remove background */
+    border: none; /* Remove border */
+    border-radius: 0;
+    text-align: center; /* Center the small control */
+}
+#filter-controls label {
+    font-weight: bold; 
+    margin-right: 0.5rem; 
+    color: rgb(17, 66, 46);
+    font-size: 0.9em; /* Smaller label */
+}
+#filter-controls select {
+    padding: 0.4rem 1rem; 
+    border-radius: 20px; /* More rounded, button-like */
+    border: 2px solid rgb(17, 66, 46); 
+    background-color: rgb(201, 241, 211);
+    color: rgb(17, 66, 46);
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Add hover state for button-like interaction */
+#filter-controls select:hover {
+    background-color: rgb(17, 66, 46);
+    color: rgb(201, 241, 211);
+    border-color: rgb(17, 66, 46);
+}
+
+/* Utility class to hide articles and sections when filtering/toggling */
+.hidden-product { 
+    display: none !important; 
+}
+
+
+/* 3. about.html: Founder Quote Toggle Styles */
+#founderQuote {
+  margin-top: 1rem; 
+  padding: 1rem; 
+  background-color: rgba(17, 66, 46, 0.1);
+  border-left: 5px solid rgb(17, 66, 46); 
+  font-style: italic; 
+  color: rgb(71, 8, 8);
+  border-radius: 5px; 
+  font-weight: normal;
+}
+#founderQuote.hidden-quote { /* Used by JS to toggle visibility via class */
+    display: none; 
+}
+#founderQuote p { 
+    margin: 0; 
+    font-weight: normal; 
+}
+/* Note: The button style (#toggleQuoteBtn) is covered by .cta-btn like styles */
+
+
+/* 4. about.html: Why Choose Us List Detail Styles */
+.reason-detail {
+  margin-top: 0.5rem; 
+  padding: 0.5rem; 
+  background-color: rgba(201, 241, 211, 0.5);
+  border-left: 3px solid rgb(17, 66, 46); 
+  border-radius: 3px; 
+  font-style: italic;
+  color: rgb(0, 0, 0); 
+  font-weight: normal; 
+  font-family: Arial, sans-serif;
+}
+.reason-detail.hidden-detail { /* Used by JS to toggle visibility */
+    display: none;
+}
+.why-choose-us-list li {
+  cursor: pointer; 
+  transition: color 0.3s; 
+  list-style: disc outside; 
+  margin-left: 1.2rem; 
+  font-weight: bold; 
+}
+.why-choose-us-list li:hover,
+.why-choose-us-list li.active-reason {
+  color: rgb(71, 8, 8); 
+}
+.reason-detail p { 
+    margin: 0; 
+    font-weight: normal; 
+    font-family: Arial, sans-serif; 
+}
+
+/* 5. about.html: Fade-in animation styles for Intersection Observer */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*Responsive breakpoints */
 /*For phones up to 430px wide*/
 @media(max-width:430px){
     body{
@@ -478,11 +1108,28 @@ main#about section{
     }
     #products section{
         flex-direction: column;
-        align-items: centre;
+        align-items: center;
     }
     #products section> article{
         width: 100%;
         max-width: 20rem;
+    }
+    /* Make filter full width and center it on small screens */
+    #filter-controls {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Stack image and text vertically on small screens */
+    #charmDetails {
+        flex-direction: column;
+        text-align: center;
+    }
+    .charm-text-content {
+        order: 2;
+    }
+    .charm-image-content {
+        order: 1;
     }
 }
 
@@ -505,7 +1152,21 @@ main#about section{
         flex: 1.1 45%;
         max-width: 22rem;
     }
-
+    /* Keep side-by-side but allow wrapping */
+    #charmDetails {
+        flex-wrap: wrap; 
+        justify-content: space-around;
+        text-align: center;
+    }
+    .charm-text-content {
+        order: 1;
+        text-align: center;
+        flex: 1 1 100%; /* Take full width on tablet */
+    }
+    .charm-image-content {
+        order: 2; 
+        flex: 1 1 auto;
+    }
 }
 
 /*Desktops screens*/
@@ -525,9 +1186,9 @@ main#about section{
         flex: 1 1 30%;
         max-width: 25rem;
     }
-    main#about{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
+    main#about {
+        display: block;
+        width: 100vw;
+        padding: 2rem 0;
+  }
 }

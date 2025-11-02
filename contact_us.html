@@ -10,7 +10,6 @@
 
 <body>
 
-  <!-- Header -->
   <header>
       <a href="index.html">
         <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="200" height="200">
@@ -18,7 +17,6 @@
 
     <p>We’d love to hear from you! ✨</p>
 
-  <!-- Navigation -->
   <nav id="topLinks">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -33,13 +31,12 @@
   </header>
 
 
-  <!-- Main content -->
   <main id="contact">
 
     <section>
       <h2>Contact Information</h2>
       <address>
-        Email: <a href="mailto:hello@deescharms.example">deesluckycharms@gmail.com</a><br>
+        Email: <a href="mailto:deesluckycharms@gmail.com">deesluckycharms@gmail.com</a><br>
         Phone: +27 658 877 789<br>
         Location: We currently do not have a physical store.
       </address>
@@ -63,21 +60,35 @@
 
     <section>
       <h2>Send Us a Message</h2>
-      <form action="mailto:hello@deescharms.example" method="post" enctype="text/plain">
+      <form id="contactForm" action="mailto:deesluckycharms@gmail.com" method="post" enctype="text/plain">
         <p>
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required>
+          <label for="name">Name (Min 3 chars):</label><br>
+          <input type="text" id="name" name="name" minlength="3" required>
+          <span id="nameError" class="error-message"></span>
         </p>
         <p>
           <label for="email">Email:</label><br>
           <input type="email" id="email" name="email" required>
+          <span id="emailError" class="error-message"></span>
         </p>
         <p>
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+          <label for="subject">Message Type (Subject):</label><br>
+          <select id="subject" name="subject" required>
+            <option value="">-- Select Message Type --</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Product Feedback">Product Feedback</option>
+            <option value="Website Issue">Website Issue</option>
+            <option value="Other">Other</option>
+          </select>
+          <span id="subjectError" class="error-message"></span>
         </p>
         <p>
-          <input type="submit" value="Send">
+          <label for="message">Message (Max 500 chars):</label><br>
+          <textarea id="message" name="body" rows="8" maxlength="500" required></textarea>
+          <span id="messageError" class="error-message"></span>
+        </p>
+        <p>
+          <button type="submit" id="submitBtn">Send</button>
           <input type="reset" value="Clear">
         </p>
       </form>
@@ -85,7 +96,8 @@
     <br class="clearFix">
   </main>
 
-  <!-- Footer -->
+  <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Back to 🔝</button>
+
   <footer>
 
      <nav id="bottomLinks">
@@ -102,6 +114,101 @@
 
     <p>© 2025 Dee's Lucky Charms</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+        const form = document.getElementById('contactForm');
+        
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            if (validateForm()) {
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                
+                const mailtoSubject = encodeURIComponent(`Message from ${name}: ${subject}`);
+                const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                
+                
+                const mailtoLink = `mailto:deesluckycharms@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+                
+                
+                window.location.href = mailtoLink;
+                
+              
+            }
+        });
+
+        
+        function validateForm() {
+            let isValid = true;
+
+           
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            
+            
+            if (nameInput.value.trim().length < 3) {
+                document.getElementById('nameError').textContent = 'Name must be at least 3 characters.';
+                isValid = false;
+            }
+
+          
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+           
+            if (subjectInput.value === "") {
+                document.getElementById('subjectError').textContent = 'Please select a message type.';
+                isValid = false;
+            }
+
+            
+            if (messageInput.value.trim().length === 0) {
+                document.getElementById('messageError').textContent = 'Message content is required.';
+                isValid = false;
+            } else if (messageInput.value.length > 500) {
+                 
+                document.getElementById('messageError').textContent = 'Message exceeds the 500 character limit.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        
+        const mybutton = document.getElementById("scrollToTopBtn");
+
+        
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        
+        window.topFunction = function() {
+          document.body.scrollTop = 0; 
+          document.documentElement.scrollTop = 0; 
+        }
+    });
+  </script>
 
 </body>
 </html>

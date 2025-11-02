@@ -63,6 +63,67 @@ Moved the navigation code into the <header> section of the HTML. This aligns the
 ###### 4. <centre> tags
 Removed the <centre> tags used to align the logo and replaced them with CSS-based alignment that allows easier styling and responsiveness.
 
+# POE Part 2 Feedback updates
+#### Added:
+###### Complete pseudo-class support for navigation menus:
+:link - Default state for unvisited navigation links
+:visited - Dark olive green color for previously visited links
+:hover - Enhanced hover effects with background color, transform lift, and shadow
+:active - Active state feedback with color change and transform reset
+:focus - Accessibility-focused outline states for keyboard navigation
+
+#### Enhanced
+###### Navigation Links:
+Added consistent padding (0.5rem 1rem) to all navigation links
+Implemented border-radius (4px) for better visual appearance
+Added smooth transitions (all 0.3s ease) for all interactive states
+Set display: inline-block to enable transform effects
+
+###### Current Page Indicator:
+Improved contrast with light text on dark background
+Added !important declarations to ensure state precedence
+Enhanced visual hierarchy with bold font weight
+
+###### Call-to-Action Buttons:
+Added proper pseudo-class support for CTA buttons
+Implemented hover transform effects and shadow
+Added focus states for accessibility
+Included active state feedback
+
+###### Form Elements:
+Added :focus states for form inputs and textareas
+Enhanced form buttons with hover, active, and focus states
+Improved visual feedback with outline and box-shadow effects
+
+#### Accessibility
+###### Focus Indicators:
+Added clear outline styles for all interactive elements
+Implemented outline-offset for better visibility
+Used consistent focus colors matching the design system
+
+###### Keyboard Navigation:
+Enhanced focus states for both top and bottom navigation
+Added focus support for form elements and buttons
+
+#### Visual Improvements
+###### Interactive Feedback:
+Transform effects (translateY(-2px)) on hover for "lift" effect
+Box shadows for depth perception
+Background color changes for state differentiation
+Smooth state transitions throughout
+
+###### Color Consistency:
+Maintained brand color palette across all states
+Used semantic color changes for different states
+Ensured proper contrast ratios for accessibility
+
+###### Technical
+#### CSS Structure:
+Organized pseudo-classes in LVHA order (Link, Visited, Hover, Active)
+Maintained proper specificity throughout
+Added comprehensive comments for navigation sections
+
+
 # 9.Test and iteration
 ## 1. Smart phone/small screen
 

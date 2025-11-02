@@ -9,7 +9,6 @@
 
 <body>
 
-  <!-- Header -->
   <header>
 
       <a href="index.html">
@@ -17,7 +16,6 @@
       </a>
     <p>Discover our handcrafted charms and jewelry collections ✨</p>
 
-  <!-- Navigation -->
   <nav id="topLinks">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -31,11 +29,21 @@
   </header>
   
 
-  <!-- Main content -->
   <main id="products">
-    <section>
+
+    <section id="filter-controls">
+        <label for="categoryFilter">Show:</label>
+        <select id="categoryFilter">
+            <option value="all">All Products</option>
+            <option value="spiritual">Spiritual Bracelets</option>
+            <option value="fashion">Fashion Bracelets</option>
+            <option value="custom">Custom Pieces</option>
+        </select>
+    </section>
+
+    <section data-category="spiritual">
       <h2>Spiritual Bracelets</h2>
-      <article>
+      <article data-product-category="spiritual">
         <h3>Thee White Howlite bracelet</h3>
         <figure>
           <img src="_images/WhiteHowlite.jpg" alt="White Howlite" width="400" height="400">
@@ -44,7 +52,7 @@
         <p>Price: R60</p>
       </article>
 
-      <article>
+      <article data-product-category="spiritual">
         <h3>Evil eye bracelet</h3>
         <figure>
           <img src="_images/evileyeBracelet.jpg" alt="Evil eye" width="400" height="400">
@@ -53,7 +61,7 @@
         <p>Price: R50</p>
       </article>
 
-      <article>
+      <article data-product-category="spiritual">
       <h3>Tiger's eye bracelet</h3>
       <figure>
         <img src="_images/tigersEye.png" alt="Tigers eye" width="400" height="400">
@@ -62,7 +70,7 @@
       <p>Price: R55</p>
     </article>
 
-    <article>
+    <article data-product-category="spiritual">
       <h3>Chakra bracelet</h3>
       <figure>
         <img src="_images/chakra.png" alt="Chakra" width="400" height="400">
@@ -71,7 +79,7 @@
       <p>Price: R100</p>
     </article>
 
-    <article>
+    <article data-product-category="spiritual">
       <h3>Citrine bracelet</h3>
       <figure>
         <img src="_images/citrine.png" alt="Citrine" width="400" height="400">
@@ -80,7 +88,7 @@
       <p>Price: R50</p>
     </article>
 
-    <article>
+    <article data-product-category="spiritual">
       <h3>Hematite bracelet</h3>
       <figure>
         <img src="_images/Hematite.png" alt="Hematite" width="400" height="400">
@@ -91,10 +99,9 @@
 
     </section>
 
-    
-    <section>
+    <section data-category="fashion">
       <h2>Fashion bracelets</h2>
-      <article>
+      <article data-product-category="fashion">
         <h3>Pink fusion bracelet</h3>
         <figure>
           <img src="_images/pinkFashionBracelet.jpg" alt="Pinky" width="400" height="400">
@@ -103,7 +110,16 @@
         <p>Price: R100</p>
       </article>
 
-      <article>
+      <article data-product-category="fashion">
+        <h3>Smiley</h3>
+        <figure>
+          <img src="_images/smiley.jpeg" alt="smiley" width="400" height="400">
+          <figcaption>Colourful bracelet with a smiley charm.</figcaption>
+        </figure>
+        <p>Price: R110</p>
+      </article>
+
+      <article data-product-category="fashion">
         <h3>Black stone</h3>
         <figure>
           <img src="_images/customBlue.jpg" alt="Bluey" width="400" height="400">
@@ -113,9 +129,9 @@
       </article>
     </section>
 
-    <section>
+    <section data-category="custom">
       <h2>Custom pieces</h2>
-      <article>
+      <article data-product-category="custom">
         <h3>White sabrina</h3>
         <figure>
           <img src="_images/sabrina.jpg" alt="White" width="400" height="400">
@@ -124,7 +140,16 @@
         <p>Price: R110</p>
       </article>
 
-      <article>
+      <article data-product-category="custom">
+        <h3>Whitey</h3>
+        <figure>
+          <img src="_images/customWhite.jpg" alt="Custom grey" width="400" height="400">
+          <figcaption>Custom white bracelet named by a client</figcaption>
+        </figure>
+        <p>Price: R130</p>
+      </article>
+
+      <article data-product-category="custom">
         <h3>Pinkry</h3>
         <figure>
           <img src="_images/PinkGrey.jpg" alt="Custom pink" width="400" height="400">
@@ -136,7 +161,6 @@
     <br class="clearFix"> 
   </main>
 
-  <!-- Footer -->
   <footer>
 
      <nav id="bottomLinks">
@@ -156,6 +180,91 @@
     </address>
     <p>© 2025 Dee's Lucky Charms</p>
   </footer>
+
+  <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Back to 🔝</button>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterDropdown = document.getElementById('categoryFilter');
+        const productArticles = document.querySelectorAll('main#products article');
+        const productSections = document.querySelectorAll('main#products section[data-category]'); // Exclude filter-controls
+
+        // Function to filter the products
+        function filterProducts() {
+            const selectedCategory = filterDropdown.value;
+
+            // 1. Iterate through all product articles (Visibility is already handled by section visibility, but we keep this for robustness)
+            productArticles.forEach(article => {
+                const articleCategory = article.getAttribute('data-product-category');
+
+                if (selectedCategory === 'all' || articleCategory === selectedCategory) {
+                    // Show the product
+                    article.classList.remove('hidden-product');
+                } else {
+                    // Hide the product
+                    article.classList.add('hidden-product');
+                }
+            });
+
+            // 2. Adjust visibility of the main product sections and their headings
+            productSections.forEach(section => {
+                const sectionCategory = section.getAttribute('data-category');
+                const heading = section.querySelector('h2'); // Get the section heading
+
+                if (selectedCategory === 'all') {
+                    // A. When 'all' is selected:
+                    // Show the entire section (to keep all articles visible in the flow)
+                    section.classList.remove('hidden-product');
+                    
+                    // Hide the section heading (to remove separation)
+                    if (heading) {
+                        heading.classList.add('hidden-product'); // Use 'hidden-product' utility class from styles.css
+                    }
+                } else if (sectionCategory === selectedCategory) {
+                    //shows the entire section when it matches the selected category
+                    section.classList.remove('hidden-product');
+                    
+                    // Shows the section heading
+                    if (heading) {
+                        heading.classList.remove('hidden-product');
+                    }
+                } else {
+                    //hides the entire section if it doesn't match the selected category
+                    section.classList.add('hidden-product');
+                }
+            });
+        }
+
+        // Attach the filter function to the dropdown's change event
+        filterDropdown.addEventListener('change', filterProducts);
+        
+        // Initial call to ensure 'All Products' are shown on load (default state)
+        filterProducts();
+    });
+
+    // NEW: Back to Top Button Logic
+    let mybutton = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      // Check if the button element exists before trying to access its style
+      if (mybutton) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
 
 </body>
 </html>
