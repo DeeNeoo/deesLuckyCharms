@@ -95,7 +95,6 @@ header{
 
 #topLinks a:visited {
     color: rgb(85, 107, 47); 
-    color: rgb(85, 107, 47); 
 }
 
 #topLinks a:hover {
@@ -230,7 +229,6 @@ footer p {
     color: rgb(17, 66, 46);
     margin-bottom: 0.3rem; 
     margin-top: 0.3rem;
-    margin-top: 0.3rem;
     display: block; 
     text-align: center; 
     width: 100%;
@@ -288,7 +286,6 @@ footer address {
 
 #bottomLinks a:visited {
     color: rgb(85, 107, 47); 
-    color: rgb(85, 107, 47); 
 }
 
 #bottomLinks a:hover{
@@ -335,8 +332,6 @@ main#about {
   box-sizing: border-box;
   padding: 2rem;
   margin-bottom: 2rem;
-  background-color: rgb(235, 250, 240); 
-  border-left: 8px solid rgb(17, 66, 46); 
   background-color: rgb(235, 250, 240); 
   border-left: 8px solid rgb(17, 66, 46); 
   border-radius: 12px;
@@ -458,6 +453,7 @@ main#about {
 
 .reason.active-reason::before {
   content: "—"; 
+}
 
 .reason:hover {
   background-color: #e6f7f0;
@@ -480,8 +476,6 @@ main#about {
 
 
 
-  padding-left: 0;
-}
 .why-choose-us-list li {
   cursor: pointer;
   list-style: none;
@@ -540,7 +534,6 @@ main#about {
 }
 #mission-section:hover, #vision-section:hover {
     transform: scale(1.02);
-    background-color: rgb(85, 107, 47); 
     background-color: rgb(85, 107, 47); 
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
@@ -621,7 +614,6 @@ main#about {
 
 #contact section h2 {
     color: rgb(71, 8, 8);
-    color: rgb(71, 8, 8); 
     border-bottom: 2px solid rgb(17, 66, 46);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
@@ -646,7 +638,6 @@ main#about {
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box; 
-    box-sizing: border-box; 
     background-color: rgb(235, 250, 240);
     color: rgb(2, 0, 0);
 }
@@ -657,7 +648,6 @@ main#about {
 
 #contact form input[type="submit"],
 #contact form input[type="reset"],
-#contact form button[type="submit"]  
 #contact form button[type="submit"] { 
     background-color: rgb(17, 66, 46);
     color: white;
@@ -685,12 +675,6 @@ main#about {
     font-size: 0.9rem;
     font-weight: bold;
     display: block; 
-}
-.error-message {
-    color: rgb(160, 0, 0); 
-    font-size: 0.9rem;
-    font-weight: bold;
-    display: block; 
     margin-top: 0.1rem;
 }
 
@@ -702,14 +686,12 @@ main#about {
   bottom: 20px; 
   right: 30px; 
   z-index: 1000; 
-  z-index: 1000; 
   border: none;
   outline: none;
   background-color: rgb(17, 66, 46); 
   color: rgb(201, 241, 211);
   cursor: pointer;
   padding: 10px 15px;
-  border-radius: 50%; 
   border-radius: 50%; 
   font-size: 16px;
   font-weight: bold;
@@ -718,7 +700,6 @@ main#about {
 }
 
 #scrollToTopBtn:hover {
-  background-color: rgb(85, 107, 47); 
   background-color: rgb(85, 107, 47); 
   transform: scale(1.05);
 }
@@ -767,38 +748,54 @@ main#about {
 /* Form input focus states */
 #enquiry form input[type="text"]:focus,
 #enquiry form input[type="email"]:focus,
+#enquiry form input[type="tel"]:focus,
+#enquiry form input[type="date"]:focus,
+#enquiry form select:focus,
 #enquiry form textarea:focus {
-    outline: 2px solid rgb(17, 66, 46);
-    border-color: rgb(17, 66, 46);
-    box-shadow: 0 0 5px rgba(17, 66, 46, 0.5);
-    box-sizing: border-box; 
-    background-color: rgb(235, 250, 240);
-    color: rgb(2, 0, 0);
-    transition: all 0.3s ease;
-}
-
-/* Form input focus states */
-#enquiry form input:focus,
-#enquiry form textarea:focus,
-#enquiry form select:focus {
-    outline: 2px solid rgb(71, 8, 8);
     border-color: rgb(71, 8, 8);
     box-shadow: 0 0 5px rgba(71, 8, 8, 0.5);
+    outline: none;
 }
 
 
-#enquiry form button[type="submit"],
+/* Form labels and details */
+#enquiry form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    color: rgb(2, 0, 0);
+}
+#enquiry form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+#enquiry form fieldset {
+    border: 1px solid rgb(17, 66, 46);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+#enquiry form legend {
+    font-weight: bold;
+    color: rgb(71, 8, 8);
+    padding: 0 0.5rem;
+}
+
+/* Submit and Reset buttons for Enquiry */
+#enquiry form input[type="submit"],
 #enquiry form input[type="reset"] {
     background-color: rgb(17, 66, 46);
     color: white;
     border: none;
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 1rem;
     transition: all 0.4s ease;
-    border-radius: 1rem;
+    border-radius: 5px;
     padding: 0.75rem 1.5rem;
     cursor: pointer;
     margin-right: 0.5rem;
+    margin-top: 1rem;
+    width: auto;
 }
 
 #enquiry form input[type="submit"]:hover,
@@ -807,317 +804,99 @@ main#about {
     transform: translateY(-2px);
 }
 
-#enquiry form input[type="submit"]:active,
-#enquiry form input[type="reset"]:active {
-    transform: translateY(0);
-}
-
-#enquiry form input[type="submit"]:focus,
-#enquiry form input[type="reset"]:focus {
-    outline: 2px solid rgb(201, 241, 211);
-    outline-offset: 2px;
-    border-radius: 5px; 
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    margin-right: 0.5rem;
-    margin-top: 1rem;
-}
-
-#enquiry form button[type="submit"]:hover,
-#enquiry form input[type="reset"]:hover {
-    background-color: rgb(71, 8, 8);
-    transform: translateY(-2px);
-}
-
-
-#enquiryResponse {
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: rgb(235, 250, 240); 
-    border: 3px solid rgb(17, 66, 46);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    text-align: center;
-}
-
-#enquiryResponse h3 {
-    color: rgb(71, 8, 8);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-#enquiryResponse p {
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: normal;
+/* Success Message Styling */
+.success-response {
+    background-color: rgba(201, 241, 211, 0.9);
     color: rgb(2, 0, 0);
-    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-left: 5px solid rgb(17, 66, 46);
+    border-radius: 5px;
+    margin-top: 1rem;
     text-align: center;
+    font-weight: bold;
+}
+.success-response h3 {
+    color: rgb(17, 66, 46);
+    margin-bottom: 0.5rem;
+}
+.success-response p {
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+.error-message {
+    color: rgb(160, 0, 0); 
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block; 
+    margin-top: 0.1rem;
 }
 
-
-/*Reviews page */
+/* Reviews Page Styles */
 #reviews {
     background-image: none;
-}
-
-#reviews main {
-    padding: 20px;
-    background-color: transparent; 
-    border-radius: 0;
-    max-width: 900px;
+    padding: 2rem;
+    max-width: 1200px;
     margin: auto;
 }
 
-
 #reviews section {
-    background-color: rgb(255, 255, 255); 
-    margin: 20px auto;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    border: 4px solid rgb(17, 66, 46); 
-    transition: transform 0.3s ease;
-}
-#reviews section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-#reviews h2, #reviews h3 {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(17, 66, 46); 
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 3px dashed rgb(201, 241, 211); 
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-}
-#reviews section > header p {
-    text-align: center;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 2rem;
-}
-
-
-#reviews aside {
-    background-color: rgb(17, 66, 46); 
-    padding: 25px;
-    margin: 1rem 0;
-    border-radius: 10px;
-    color: rgb(201, 241, 211); 
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    font-weight: normal; 
-    font-size: 1rem;
-}
-.review-quote {
-    font-size: 1.15rem;
-    font-style: italic;
-    color: rgb(255, 255, 255);
-}
-.review-author {
-    text-align: right;
-    font-weight: bold;
-    color: rgb(201, 241, 211);
-    margin-top: 0.5rem;
-}
-
-
-#review-submission {
+    margin-bottom: 3rem;
+    padding: 2rem;
     background-color: rgb(235, 250, 240); 
-    border: 4px solid rgb(17, 66, 46); 
-    box-shadow: 0 8px 20px rgba(17, 66, 46, 0.4);
-    margin: 20px auto;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(17, 66, 46, 0.15);
 }
 
-#reviewForm p {
-    margin-bottom: 1rem;
+#reviews header h2 {
+    color: rgb(71, 8, 8);
+    border-bottom: 2px solid rgb(17, 66, 46);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
 }
 
-#reviewForm label {
-    display: block;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    color: rgb(17, 66, 46); 
-}
-
-#reviewForm input[type="text"],
-#reviewForm input[type="email"],
-#reviewForm textarea {
-    width: 100%;
+/* Customer Review Carousel */
+#review-carousel {
+    display: flex;
+    overflow-x: hidden; 
+    scroll-snap-type: x mandatory;
+    gap: 20px; 
     padding: 10px;
-    border: 2px solid rgb(17, 66, 46);
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-family: monospace;
-    font-size: 1rem;
-    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
 }
-#reviewForm textarea {
-    resize: vertical;
+.review-card {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 300px; 
+    min-height: 250px;
+    background-color: rgb(201, 241, 211);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(17, 66, 46);
 }
 
-#reviewForm button[type="submit"] {
-    background-color: rgb(17, 66, 46); 
-    color: rgb(201, 241, 211);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.1s;
+/* Navigation Arrows for Carousel */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
     margin-top: 1rem;
+    gap: 20px;
 }
-
-#reviewForm button[type="submit"]:hover {
-    background-color: rgb(71, 8, 8); 
-    transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-
-
-.rating-box {
-    margin: 1.5rem 0;
-    text-align: center;
-    border: 2px solid rgb(17, 66, 46);
-    padding: 15px 10px;
-    border-radius: 8px;
-    background-color: rgb(255, 255, 255);
-}
-
-.star-rating-area {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 10px;
-    position: relative;
-}
-
-.star-rating-area input {
-    display: none;
-}
-
-.star-rating-area label {
-    font-size: 2.8rem;
-    color: #ccc; 
-    cursor: pointer;
-    margin: 0 2px;
-    transition: color 0.2s ease, transform 0.1s;
-    display: inline-block;
-    line-height: 1;
-}
-
-
-.star-rating-area label:hover,
-.star-rating-area label:hover ~ label {
-    color: gold;
-    transform: scale(1.1);
-}
-
-
-.star-rating-area input:checked ~ label {
-    color: gold !important; 
-}
-
-.star-rating-area input:checked + label {
-    text-shadow: 0 0 5px orange;
-}
-
-/* Rating Text Display */
-#rating-text {
-    position: absolute;
-    top: -35px; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgb(17, 66, 46); 
-    color: rgb(201, 241, 211);
-    padding: 5px 10px;
+.carousel-nav button {
+    background-color: rgb(17, 66, 46);
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 0.9rem;
-    font-family: monospace;
-    white-space: nowrap;
-    opacity: 1;
-    pointer-events: none; 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-/* star rating system styling */
-.rating-box {
-    margin: 1.5rem 0;
-    text-align: center;
-    border: 2px solid rgb(17, 66, 46);
-    padding: 15px 10px;
-    border-radius: 8px;
-    background-color: rgb(255, 255, 255);
-}
-
-.star-rating-area {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 10px;
-    position: relative;
-}
-
-.star-rating-area input {
-    display: none;
-}
-
-.star-rating-area label {
-    font-size: 2.8rem; 
-    color: #ccc; 
     cursor: pointer;
-    margin: 0 2px;
-    transition: color 0.2s ease, transform 0.1s;
-    display: inline-block;
-    line-height: 1;
+    transition: background-color 0.3s;
+}
+.carousel-nav button:hover {
+    background-color: rgb(71, 8, 8);
 }
 
-
-.star-rating-area label:hover,
-.star-rating-area label:hover ~ label {
-    color: gold;
-    transform: scale(1.1);
-}
-
-
-.star-rating-area input:checked ~ label {
-    color: gold;
-}
-.star-rating-area input:checked ~ label:hover,
-.star-rating-area input:checked ~ label:hover ~ label {
-    color: gold; 
-}
-
-/* Rating Text Display */
-#rating-text {
-    position: absolute;
-    top: -35px; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgb(71, 8, 8); 
-    color: rgb(201, 241, 211);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-family: monospace;
-    white-space: nowrap;
-    opacity: 1;
-    pointer-events: none; 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
 
 /* Review Carousel Content Styles */
 .review-header {
@@ -1129,7 +908,6 @@ main#about {
     padding-bottom: 15px;
     border-bottom: 1px dashed rgba(201, 241, 211, 0.5);
 }
-
 .review-image {
     width: 60px;
     height: 60px;
@@ -1138,64 +916,88 @@ main#about {
     border: 2px solid rgb(201, 241, 211);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
-
 .review-stars {
     font-size: 1.5rem;
     color: gold;
     letter-spacing: 2px;
 }
 
-
 /* the star rating system */
-.star-rating-area input:checked ~ label {
-    color: gold !important; 
+.star-rating-area input {
+    display: none;
 }
-
+.star-rating-area label {
+    font-size: 2.5rem;
+    color: #ccc;
+    cursor: pointer;
+    margin: 0; 
+    line-height: 1; 
+    transition: color 0.3s;
+}
+.star-rating-area input:checked ~ label {
+    color: gold !important;
+}
 .star-rating-area input:checked + label {
     text-shadow: 0 0 5px orange;
 }
-
-
-.star-rating-area label:hover,
+.star-rating-area label:hover, 
 .star-rating-area label:hover ~ label {
     color: gold;
 }
 
-
-.star-rating-area label {
-    color: #ccc;
+#review-form-area {
+    margin-top: 3rem;
+}
+#reviewForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+#reviewForm input[type="text"],
+#reviewForm input[type="email"],
+#reviewForm textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.2rem;
+    border: 2px solid rgb(17, 66, 46);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+    background-color: rgb(255, 255, 255);
 }
 
-/* styling for the Scroll-to-Top Button */
-#scrollToTopBtn {
-  display: none; 
-  position: fixed; 
-  bottom: 20px; 
-  right: 30px; 
-  z-index: 99; 
-  border: none;
-  outline: none;
-  background-color: rgb(17, 66, 46); 
-  color: white;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 18px;
-  transition: background-color 0.3s;
+#reviewForm textarea {
+    resize: vertical;
 }
 
-#scrollToTopBtn:hover {
-  background-color: rgb(41, 106, 76); 
+#reviewForm button[type="submit"] {
+    background-color: rgb(71, 8, 8);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: block;
 }
 
+#reviewForm button[type="submit"]:hover {
+    background-color: rgb(120, 15, 15);
+    transform: translateY(-2px);
+}
 
+/* Charm Suggestion Styles */
 #rotatingCharmSuggestion {
     text-align: center;
     padding: 2rem;
     margin: 2rem auto;
-    background-color: rgb(107, 141, 127); 
+    background-color: rgb(107, 141, 127);
     border-radius: 10px;
-    max-width: 800px; 
+    max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
@@ -1206,174 +1008,62 @@ main#about {
     margin-bottom: 1rem;
 }
 
-
 #charmDetails {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-align: left; 
+    text-align: left;
     padding: 10px;
     transition: opacity 0.3s ease-in-out;
 }
 
 .charm-fading {
-    opacity: 0; 
+    opacity: 0;
 }
 
-
 .charm-text-content {
-    flex: 1; 
-    order: 1; 
+    flex: 1;
+    order: 1;
     min-width: 50%;
 }
 
-
 .charm-image-content {
-    flex-shrink: 0; 
-    order: 2; 
+    flex-shrink: 0;
+    order: 2;
+    max-width: 250px;
 }
 
-#rotatingCharmSuggestion a.cta-btn {
-    margin-top: 1rem; 
-    margin-bottom: 0; 
-    display: inline-block;
-}
-
-
-.charm-suggestion-img {
-    max-width: 150px;
+.charm-image-content img {
+    width: 100%;
     height: auto;
     border-radius: 8px;
-    margin: 0; 
-    border: 2px solid rgb(17, 66, 46);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    display: block;
-}
-
-
-/* interactive styles */
-
-#welcomeSection { 
-    transition: all 0.5s ease-in-out; 
-}
-#welcomeSection.welcome-section-active { 
-    transform: scale(1.02); 
-}
-#introText.welcome-text-active { 
-    color: rgb(71, 8, 8); 
-    font-weight: bold; 
-}
-
-
-#filter-controls {
-    margin-bottom: 1.5rem; 
-    padding: 0.5rem 0; 
-    background-color: transparent; 
-    border: none; 
-    border-radius: 0;
-    text-align: center;
-}
-#filter-controls label {
-    font-weight: bold; 
-    margin-right: 0.5rem; 
-    color: rgb(17, 66, 46);
-    font-size: 0.9em; 
-}
-#filter-controls select {
-    padding: 0.4rem 1rem; 
-    border-radius: 20px; 
-    border: 2px solid rgb(17, 66, 46); 
-    background-color: rgb(201, 241, 211);
-    color: rgb(17, 66, 46);
-    font-size: 0.9em;
-    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-#filter-controls select:hover {
-    background-color: rgb(17, 66, 46);
-    color: rgb(201, 241, 211);
-    border-color: rgb(17, 66, 46);
+.charm-image-content img:hover {
+    transform: scale(1.05);
 }
 
-
-.hidden-product { 
-    display: none !important; 
+.charm-text-content h3 {
+    font-size: 1.5rem;
+    color: rgb(2, 0, 0);
+    margin-bottom: 0.5rem;
 }
 
-
-
-#founderQuote {
-  margin-top: 1rem; 
-  padding: 1rem; 
-  background-color: rgba(17, 66, 46, 0.1);
-  border-left: 5px solid rgb(17, 66, 46); 
-  font-style: italic; 
-  color: rgb(71, 8, 8);
-  border-radius: 5px; 
-  font-weight: normal;
-}
-#founderQuote.hidden-quote { 
-    display: none; 
-}
-#founderQuote p { 
-    margin: 0; 
-    font-weight: normal; 
+.charm-text-content p {
+    font-size: 1rem;
+    color: rgb(2, 0, 0);
+    margin-bottom: 1.5rem;
 }
 
-
-
-.reason-detail {
-  margin-top: 0.5rem; 
-  padding: 0.5rem; 
-  background-color: rgba(201, 241, 211, 0.5);
-  border-left: 3px solid rgb(17, 66, 46); 
-  border-radius: 3px; 
-  font-style: italic;
-  color: rgb(0, 0, 0); 
-  font-weight: normal; 
-  font-family: Arial, sans-serif;
-}
-.reason-detail.hidden-detail { 
-    display: none;
-}
-.why-choose-us-list li {
-  cursor: pointer; 
-  transition: color 0.3s; 
-  list-style: disc outside; 
-  margin-left: 1.2rem; 
-  font-weight: bold; 
-}
-.why-choose-us-list li:hover,
-.why-choose-us-list li.active-reason {
-  color: rgb(71, 8, 8); 
-}
-.reason-detail p { 
-    margin: 0; 
-    font-weight: normal; 
-    font-family: Arial, sans-serif; 
-}
-
-
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 0.6s ease-out;
-}
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/*Lightbox Styles */
+/* Lightbox Styles */
 .lightbox {
     display: none; 
     position: fixed; 
-    z-index: 1001;
+    z-index: 1001; 
     padding-top: 50px; 
     left: 0;
     top: 0;
@@ -1390,8 +1080,20 @@ main#about {
     display: block;
     width: 80%;
     max-width: 700px;
-    max-height: 80vh; 
-    object-fit: contain; /
+    max-height: 80vh;
+    object-fit: contain; 
+}
+
+/* Caption of Lightbox */
+#image-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
 }
 
 /* close button */
@@ -1403,7 +1105,6 @@ main#about {
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .close-btn:hover,
@@ -1413,191 +1114,91 @@ main#about {
     cursor: pointer;
 }
 
-/* Caption of the light box image */
-#image-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-    font-size: 1.1rem;
-    font-style: italic;
-}
-
-
-/* Added zoom animation */
-.lightbox-content, #image-caption {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-
-
-    body{
-        font-size: 0.9rem;
-    }
-    h1,h2{
-        font-size: 2rem;
-    }
-    .hero{
-        padding: 2rem 1rem;
-        min-height: 80%;
-    }
-    #topLinks ul, #bottomLinks ul{
-        flex-direction: column;
-        gap: 1rem;
-    }
-    #products section{
-        flex-direction: column;
-        align-items: center;
-    }
-    #products section> article{
-        width: 100%;
-        max-width: 20rem;
-    }
-    
-    #filter-controls {
-        text-align: center;
-        width: 100%;
-    }
-
-    
-    #charmDetails {
-        flex-direction: column;
-        text-align: center;
-    }
-    .charm-text-content {
-        order: 2;
-    }
-    .charm-image-content {
-        order: 1;
-    }
+/* Delivery Section Styles (from about page) */
 #delivery-info-section {
-    background-color: rgb(235, 250, 240); 
-    border-left: 8px solid rgb(71, 8, 8); 
+    background-color: rgb(235, 250, 240);
+    border-left: 8px solid rgb(71, 8, 8);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(71, 8, 8, 0.15);
     transition: transform 0.3s ease;
     text-align: center;
 }
+
 #delivery-info-section:hover {
-  transform: scale(1.01);
+    transform: scale(1.01);
 }
 
 /* Interactible Delivery Map Styles */
 #delivery-map-container {
     max-width: 450px;
     margin: 2rem auto;
-    height: 150px; 
+    height: 150px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, rgba(17, 66, 46, 0.1), rgba(201, 241, 211, 0.5)); 
+    background: linear-gradient(135deg, rgba(17, 66, 46, 0.1), rgba(201, 241, 211, 0.5));
     border-radius: 15px;
     border: 1px solid rgb(17, 66, 46);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 #delivery-pin {
     width: 60px;
     height: 60px;
-    background-color: rgb(71, 8, 8); 
+    background-color: rgb(71, 8, 8);
     color: white;
-    border-radius: 50% 50% 50% 0; 
+    border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
     position: absolute;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
-    animation: bounce 2s infinite; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
 }
-
-
-#delivery-pin span {
-    display: block;
-    transform: rotate(45deg); 
-    font-size: 1.5rem;
-    line-height: 60px;
-    text-align: center;
-}
-
 
 #delivery-pin:hover {
-    transform: rotate(-45deg) scale(1.1);
-    background-color: rgb(17, 66, 46); 
-    animation: none; 
+    background-color: rgb(120, 15, 15);
 }
 
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: rotate(-45deg) translateY(0);}
-  40% {transform: rotate(-45deg) translateY(-10px);}
-  60% {transform: rotate(-45deg) translateY(-5px);}
+#delivery-pin::after {
+    content: "📍";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    font-size: 1.5rem;
+    line-height: 1;
 }
-
 
 #pin-tooltip {
     position: absolute;
-    top: -35px; 
-    left: 70px; 
-    background-color: rgb(201, 241, 211);
-    color: rgb(71, 8, 8);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-family: monospace;
-    font-size: 0.9rem;
-    pointer-events: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    z-index: 10;
-}
-#delivery-pin:hover #pin-tooltip {
-    opacity: 1;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    display: block; 
 }
 
-/* Delivery Details Display Area */
 #delivery-details-display {
-    text-align: left;
     max-width: 450px;
     margin: 1rem auto;
-    padding: 1rem;
-    border: 1px dashed rgb(17, 66, 46);
-    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in;
-    max-height: fit-content;
-    opacity: 1;
-    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-
 #delivery-details-display.hidden {
-    max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    border: none;
-    opacity: 0;
+    display: none;
 }
 
 #delivery-details-display h3 {
@@ -1619,116 +1220,3 @@ main#about {
     font-size: 0.95rem;
     font-family: monospace;
 }
-
-
-    body{
-        font-size: 1rem;
-    }
-    .hero h1{
-        font-size: 2.5rem;
-    }
-    .hero p{
-        font-size: 1.1rem;
-    }
-    #products section{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    #products section> article{
-        flex: 1.1 45%;
-        max-width: 22rem;
-    }
-    
-    #charmDetails {
-        flex-wrap: wrap; 
-        justify-content: space-around;
-        text-align: center;
-    }
-    .charm-text-content {
-        order: 1;
-        text-align: center;
-        flex: 1 1 100%; 
-    }
-    .charm-image-content {
-        order: 2; 
-        flex: 1 1 auto;
-    }
-
-
-    body{
-        font-size: 1.2rem;
-    }
-    .hero{
-        padding: 6rem 2rem;
-        min-height: 100%;
-    }
-    #products section{
-        justify-content: space-between;
-        gap:2rem;
-    }
-    #products section> article{
-        flex: 1 1 30%;
-        max-width: 25rem;
-    }
-    main#about {
-        display: block;
-        width: 100vw;
-        padding: 2rem 0;
-  }
-
-  
-/* Responsive braekpoints */
-
-/* Small Phones (up to 480px) */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  header nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Tablets (up to 768px)  */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 15px;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sidebar {
-    display: none; 
-  }
-
-  .content {
-    width: 100%;
-  }
-}
-
-/* Laptops and Small Desktops (up to 1024px)  */
-@media (max-width: 1024px) {
-  body {
-    font-size: 17px;
-    padding: 18px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px;
-  }
-}
-
