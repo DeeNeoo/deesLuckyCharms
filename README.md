@@ -270,6 +270,22 @@ Pinterest, 2025. Citrine bracelet [image] Available at: https://www.pinterest.co
 
 Pinterest, 2025. Tigers eye Bracelet [image] Available at: https://www.pinterest.com [Accessed 20 Aug. 2025].
 
+Pinterest, 2025. smiley charm bracelet. [image] Available at: https://www.pinterest.com [Accessed 01 Nov. 2025].
+
+Pinterest, 2025. white marble bracelet. [image] Available at: https://www.pinterest.com [Accessed 01 Nov. 2025].
+
+W3Schools (n.d.) JavaScript Date Methods. Available at: https://www.w3schools.com/jsref/jsref_obj_date.asp (Accessed: 1 November 2025).
+
+W3Schools (n.d.) HTML <title> Tag. Available at: https://www.w3schools.com/tags/tag_title.asp (Accessed: 1 November 2025).
+
+W3Schools (n.d.) HTML <meta> Tag. Available at: https://www.w3schools.com/tags/tag_meta.asp (Accessed: 1 November 2025).
+
+W3Schools (n.d.) CSS Animations. Available at: https://www.w3schools.com/css/css3_animations.asp (Accessed: 1 November 2025).
+
+W3Schools (n.d.) CSS Flexbox. Available at: https://www.w3schools.com/css/css3_flexbox.asp (Accessed: 1 November 2025).
+
+Lee, E. (2021) Dissecting the Pure CSS Lightbox. Available at: https://develijahlee.medium.com/dissecting-the-pure-css-lightbox-cd8de94e48c1 (Accessed: 1 November 2025 )
+
 
 
 
