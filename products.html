@@ -206,6 +206,7 @@
                 }
             });
 
+<<<<<<< HEAD
             
             productSections.forEach(section => {
                 const sectionCategory = section.getAttribute('data-category');
@@ -213,6 +214,16 @@
 
                 if (selectedCategory === 'all') {
                     
+=======
+            // 2. Adjust visibility of the main product sections and their headings
+            productSections.forEach(section => {
+                const sectionCategory = section.getAttribute('data-category');
+                const heading = section.querySelector('h2'); // Get the section heading
+
+                if (selectedCategory === 'all') {
+                    // A. When 'all' is selected:
+                    // Show the entire section (to keep all articles visible in the flow)
+>>>>>>> 1d5f8bb (added interactive elements to all the web pages)
                     section.classList.remove('hidden-product');
                     
                     // Hide the section heading (to remove separation)

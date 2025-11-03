@@ -74,6 +74,22 @@
       </ul>
     </section>
     
+    <section id="delivery-info-section" class="section-six"> 
+      <h2>Nationwide Delivery</h2>
+      <p>Although we are based in Johannesburg, we deliver our lucky charms nationwide! Click the location pin below to see all your available delivery options and estimated times.</p>
+      
+      <div id="delivery-map-container">
+          <div id="delivery-pin">
+              <span>&#x1F4CD;</span> 
+              <div id="pin-tooltip">Click for Delivery Options</div>
+          </div>
+      </div>
+      
+      <div id="delivery-details-display" class="hidden">
+          </div>
+    </section>
+
+    
     <br class="clearFix">
     <button id="scrollToTopBtn" title="Go to top" style="display: none;">Back to 🔝</button>
   </main>
@@ -140,6 +156,43 @@
       scrollToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
+      
+      // NEW JAVASCRIPT FOR INTERACTIVE DELIVERY PIN
+      const deliveryPin = document.getElementById('delivery-pin');
+      const deliveryDisplay = document.getElementById('delivery-details-display');
+      
+      // Delivery options (combined)
+      const deliveryOptionsHTML = `
+          <h3>🚚 Nationwide Delivery Options:</h3>
+          <ul>
+              <li>📦 <strong>Courier Guy</strong>: R60 | Takes 3-4 business days (Best Value)</li>
+              <li>📦 <strong>Pudo Delivery</strong>: R100 | Takes 3-4 business days.</li>
+          </ul>
+          <h3>🛵 Johannesburg (Local) Same Day Service:</h3>
+          <ul>
+              <li><strong>Same Day Delivery</strong>: R200 | Only for orders placed before 1 PM.</li>
+          </ul>
+      `;
+
+      if (deliveryPin && deliveryDisplay) {
+          
+          // Inject content once
+          deliveryDisplay.innerHTML = deliveryOptionsHTML;
+          
+          // Click Handler: Toggle display
+          deliveryPin.addEventListener('click', function() {
+              deliveryDisplay.classList.toggle('hidden');
+              
+              const tooltip = document.getElementById('pin-tooltip');
+              if (!deliveryDisplay.classList.contains('hidden')) {
+                  // If showing, update tooltip
+                  tooltip.textContent = 'Click to Hide Details';
+              } else {
+                  // If hiding, reset tooltip
+                  tooltip.textContent = 'Click for Delivery Options';
+              }
+          });
+      }
     });
   </script>
 </body>
