@@ -1041,18 +1041,18 @@ main#about {
     line-height: 1;
 }
 
-/* Hover effect: color all stars up to the hovered one */
+
 .star-rating-area label:hover,
 .star-rating-area label:hover ~ label {
     color: gold;
     transform: scale(1.1);
 }
 
-/* Selected/Checked state: color all stars up to the selected one (highest specificity) */
+
 .star-rating-area input:checked ~ label {
     color: gold !important; 
 }
-/* Visual feedback for a selected state: slightly brighter/different shadow */
+
 .star-rating-area input:checked + label {
     text-shadow: 0 0 5px orange;
 }
@@ -1063,7 +1063,7 @@ main#about {
     top: -35px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgb(17, 66, 46); /* DARK GREEN Background (Replaced Burgundy) */
+    background-color: rgb(17, 66, 46); 
     color: rgb(201, 241, 211);
     padding: 5px 10px;
     border-radius: 5px;
@@ -1075,10 +1075,7 @@ main#about {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* ================================================================
-   STAR RATING SYSTEM STYLING
-   ================================================================ */
-
+/* star rating system styling */
 .rating-box {
     margin: 1.5rem 0;
     text-align: center;
@@ -1101,7 +1098,7 @@ main#about {
 }
 
 .star-rating-area label {
-    font-size: 2.8rem; /* Slightly larger stars */
+    font-size: 2.8rem; 
     color: #ccc; 
     cursor: pointer;
     margin: 0 2px;
@@ -1110,20 +1107,20 @@ main#about {
     line-height: 1;
 }
 
-/* Hover effect: color all stars up to the hovered one */
+
 .star-rating-area label:hover,
 .star-rating-area label:hover ~ label {
     color: gold;
     transform: scale(1.1);
 }
 
-/* Selected/Checked state: color all stars up to the selected one */
+
 .star-rating-area input:checked ~ label {
     color: gold;
 }
 .star-rating-area input:checked ~ label:hover,
 .star-rating-area input:checked ~ label:hover ~ label {
-    color: gold; /* Maintain color on hover after selection */
+    color: gold; 
 }
 
 /* Rating Text Display */
@@ -1132,7 +1129,7 @@ main#about {
     top: -35px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgb(71, 8, 8); /* Dark Brown/Red Background */
+    background-color: rgb(71, 8, 8); 
     color: rgb(201, 241, 211);
     padding: 5px 10px;
     border-radius: 5px;
@@ -1170,31 +1167,28 @@ main#about {
     letter-spacing: 2px;
 }
 
-/* ================================================================
-   STAR RATING SYSTEM FIX: Ensure selected stars are not affected by hover
-   ================================================================ */
 
-/* Selected/Checked state: color all stars up to the selected one (highest specificity) */
+/* the star rating system */
 .star-rating-area input:checked ~ label {
-    color: gold !important; /* This is the fix: use !important to override the hover state */
+    color: gold !important; 
 }
-/* Visual feedback for a selected state: slightly brighter/different shadow */
+
 .star-rating-area input:checked + label {
     text-shadow: 0 0 5px orange;
 }
 
-/* Keep the normal hover color gold */
+
 .star-rating-area label:hover,
 .star-rating-area label:hover ~ label {
     color: gold;
 }
 
-/* Ensure unselected stars don't retain color when not hovered */
+
 .star-rating-area label {
     color: #ccc;
 }
 
-/* CSS for the Scroll-to-Top Button */
+/* styling for the Scroll-to-Top Button */
 #scrollToTopBtn {
   display: none; 
   position: fixed; 
@@ -1216,14 +1210,14 @@ main#about {
   background-color: rgb(41, 106, 76); 
 }
 
-/* NEW: Rotating Charm Suggestion Styles */
+
 #rotatingCharmSuggestion {
     text-align: center;
     padding: 2rem;
     margin: 2rem auto;
-    background-color: rgb(107, 141, 127); /* Background color to make it stand out */
+    background-color: rgb(107, 141, 127); 
     border-radius: 10px;
-    max-width: 800px; /* Constrain width for a good look */
+    max-width: 800px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
@@ -1234,33 +1228,33 @@ main#about {
     margin-bottom: 1rem;
 }
 
-/* Flexbox container for side-by-side layout */
+
 #charmDetails {
     display: flex;
-    flex-direction: row; /* Keep content and image side-by-side */
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-align: left; /* Reset text alignment for the content */
+    text-align: left; 
     padding: 10px;
     transition: opacity 0.3s ease-in-out;
 }
 
 .charm-fading {
-    opacity: 0; /* Fade out state */
+    opacity: 0; 
 }
 
-/* Container for text content */
+
 .charm-text-content {
-    flex: 1; /* Allows the text to take available space */
-    order: 1; /* Text content on the left */
+    flex: 1; 
+    order: 1; 
     min-width: 50%;
 }
 
-/* Container for image content */
+
 .charm-image-content {
-    flex-shrink: 0; /* Prevents the image from shrinking too much */
-    order: 2; /* Image on the right */
+    flex-shrink: 0; 
+    order: 2; 
 }
 
 #rotatingCharmSuggestion a.cta-btn {
@@ -1269,25 +1263,20 @@ main#about {
     display: inline-block;
 }
 
-/* Style for the image inside the rotating charm suggestion */
+
 .charm-suggestion-img {
     max-width: 150px;
     height: auto;
     border-radius: 8px;
-    margin: 0; /* Removed margin-bottom */
+    margin: 0; 
     border: 2px solid rgb(17, 66, 46);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: block;
 }
 
 
-/*
-================================================================
-   Interactivity Styles (Used by JavaScript in HTML files)
-================================================================
-*/
+/* interactive styles */
 
-/* 1. index.html: Welcome Text Animation Classes */
 #welcomeSection { 
     transition: all 0.5s ease-in-out; 
 }
@@ -1299,24 +1288,24 @@ main#about {
     font-weight: bold; 
 }
 
-/* 2. products.html: Product Filter Styles */
+
 #filter-controls {
     margin-bottom: 1.5rem; 
-    padding: 0.5rem 0; /* Reduced padding */
-    background-color: transparent; /* Remove background */
-    border: none; /* Remove border */
+    padding: 0.5rem 0; 
+    background-color: transparent; 
+    border: none; 
     border-radius: 0;
-    text-align: center; /* Center the small control */
+    text-align: center;
 }
 #filter-controls label {
     font-weight: bold; 
     margin-right: 0.5rem; 
     color: rgb(17, 66, 46);
-    font-size: 0.9em; /* Smaller label */
+    font-size: 0.9em; 
 }
 #filter-controls select {
     padding: 0.4rem 1rem; 
-    border-radius: 20px; /* More rounded, button-like */
+    border-radius: 20px; 
     border: 2px solid rgb(17, 66, 46); 
     background-color: rgb(201, 241, 211);
     color: rgb(17, 66, 46);
@@ -1325,20 +1314,20 @@ main#about {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-/* Add hover state for button-like interaction */
+
 #filter-controls select:hover {
     background-color: rgb(17, 66, 46);
     color: rgb(201, 241, 211);
     border-color: rgb(17, 66, 46);
 }
 
-/* Utility class to hide articles and sections when filtering/toggling */
+
 .hidden-product { 
     display: none !important; 
 }
 
 
-/* 3. about.html: Founder Quote Toggle Styles */
+
 #founderQuote {
   margin-top: 1rem; 
   padding: 1rem; 
@@ -1349,17 +1338,16 @@ main#about {
   border-radius: 5px; 
   font-weight: normal;
 }
-#founderQuote.hidden-quote { /* Used by JS to toggle visibility via class */
+#founderQuote.hidden-quote { 
     display: none; 
 }
 #founderQuote p { 
     margin: 0; 
     font-weight: normal; 
 }
-/* Note: The button style (#toggleQuoteBtn) is covered by .cta-btn like styles */
 
 
-/* 4. about.html: Why Choose Us List Detail Styles */
+
 .reason-detail {
   margin-top: 0.5rem; 
   padding: 0.5rem; 
@@ -1371,7 +1359,7 @@ main#about {
   font-weight: normal; 
   font-family: Arial, sans-serif;
 }
-.reason-detail.hidden-detail { /* Used by JS to toggle visibility */
+.reason-detail.hidden-detail { 
     display: none;
 }
 .why-choose-us-list li {
@@ -1391,7 +1379,7 @@ main#about {
     font-family: Arial, sans-serif; 
 }
 
-/* 5. about.html: Fade-in animation styles for Intersection Observer */
+
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
@@ -1402,34 +1390,33 @@ main#about {
     transform: translateY(0);
 }
 
-/*home page */
-/* --- Lightbox Styles --- */
-/* The Modal (lightbox) background */
+
+/*Lightbox Styles */
 .lightbox {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1001; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 1001;
+    padding-top: 50px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
-/* Lightbox Content (image) */
+/* Lightbox image */
 .lightbox-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
-    max-height: 80vh; /* Limit height for better viewing */
-    object-fit: contain; /* Ensure the image fits within the bounds */
+    max-height: 80vh; 
+    object-fit: contain; /
 }
 
-/* The Close Button */
+/* close button */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -1448,7 +1435,7 @@ main#about {
     cursor: pointer;
 }
 
-/* Caption of Lightbox Image */
+/* Caption of the light box image */
 #image-caption {
     margin: auto;
     display: block;

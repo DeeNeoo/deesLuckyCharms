@@ -1,117 +1,144 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dee's lucky charms Product page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spiritual Bracelets & Lucky Charms | Dee's Lucky Charms Collection</title>
+  <meta name="description" content="Browse our collection of spiritual bracelets, fashion jewelry and custom charms. Tiger's eye, evil eye, chakra and citrine bracelets with meaningful symbolism.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Ensures hidden items are properly hidden */
+    .hidden-product {
+      display: none !important;
+    }
 
+    #scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0a4822;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #066b31;
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-
-      <a href="index.html">
-        <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="200" height="200">
-      </a>
+    <a href="index.html">
+      <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="200" height="200">
+    </a>
     <p>Discover our handcrafted charms and jewelry collections ✨</p>
 
-  <nav id="topLinks">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li class="currentPage">Products</li>
-      <li><a href="contact_us.html">Contact</a></li>
-      <li><a href="enquiry.html">Enquiry</a></li>
-      <li><a href="Reviews.html">Reviews</a> </li>
-    </ul>
-  </nav>
+    <nav id="topLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="currentPage">Products</li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+      </ul>
+    </nav>
   </header>
-  
 
   <main id="products">
+    <h1>Spiritual Bracelets & Lucky Charms Collection</h1>
 
     <section id="filter-controls">
-        <label for="categoryFilter">Show:</label>
-        <select id="categoryFilter">
-            <option value="all">All Products</option>
-            <option value="spiritual">Spiritual Bracelets</option>
-            <option value="fashion">Fashion Bracelets</option>
-            <option value="custom">Custom Pieces</option>
-        </select>
+      <label for="categoryFilter">Show:</label>
+      <select id="categoryFilter">
+        <option value="all">All Products</option>
+        <option value="spiritual">Spiritual Bracelets</option>
+        <option value="fashion">Fashion Bracelets</option>
+        <option value="custom">Custom Pieces</option>
+      </select>
     </section>
 
+    <!-- Spiritual -->
     <section data-category="spiritual">
       <h2>Spiritual Bracelets</h2>
+
       <article data-product-category="spiritual">
-        <h3>Thee White Howlite bracelet</h3>
+        <h3>The White Howlite Bracelet</h3>
         <figure>
           <img src="_images/WhiteHowlite.jpg" alt="White Howlite" width="400" height="400">
-          <figcaption>Known as a calming stone, channels calm energy one bead at a time </figcaption>
+          <figcaption>Known as a calming stone, channels calm energy one bead at a time.</figcaption>
         </figure>
         <p>Price: R60</p>
       </article>
 
       <article data-product-category="spiritual">
-        <h3>Evil eye bracelet</h3>
+        <h3>Evil Eye Bracelet</h3>
         <figure>
           <img src="_images/evileyeBracelet.jpg" alt="Evil eye" width="400" height="400">
-          <figcaption>Wards off negativitity, carry protection in style.</figcaption>
+          <figcaption>Wards off negativity — carry protection in style.</figcaption>
         </figure>
         <p>Price: R50</p>
       </article>
 
       <article data-product-category="spiritual">
-      <h3>Tiger's eye bracelet</h3>
-      <figure>
-        <img src="_images/tigersEye.png" alt="Tigers eye" width="400" height="400">
-        <figcaption>This red Tiger's eye channels courage, focus and grounded energy.</figcaption>
-      </figure>
-      <p>Price: R55</p>
-    </article>
+        <h3>Tiger's Eye Bracelet</h3>
+        <figure>
+          <img src="_images/tigersEye.png" alt="Tigers eye" width="400" height="400">
+          <figcaption>This red Tiger's Eye channels courage, focus, and grounded energy.</figcaption>
+        </figure>
+        <p>Price: R55</p>
+      </article>
 
-    <article data-product-category="spiritual">
-      <h3>Chakra bracelet</h3>
-      <figure>
-        <img src="_images/chakra.png" alt="Chakra" width="400" height="400">
-        <figcaption>The stylish Chakra bracelet balances energy centers using 7 coloured beads, each linked to a specific chakra.</figcaption>
-      </figure>
-      <p>Price: R100</p>
-    </article>
+      <article data-product-category="spiritual">
+        <h3>Chakra Bracelet</h3>
+        <figure>
+          <img src="_images/chakra.png" alt="Chakra" width="400" height="400">
+          <figcaption>The stylish Chakra bracelet balances energy centers using 7 coloured beads, each linked to a specific chakra.</figcaption>
+        </figure>
+        <p>Price: R100</p>
+      </article>
 
-    <article data-product-category="spiritual">
-      <h3>Citrine bracelet</h3>
-      <figure>
-        <img src="_images/citrine.png" alt="Citrine" width="400" height="400">
-        <figcaption>This golden-yellow gemstone attracts positivity, abundence and confidence.</figcaption>
-      </figure>
-      <p>Price: R50</p>
-    </article>
+      <article data-product-category="spiritual">
+        <h3>Citrine Bracelet</h3>
+        <figure>
+          <img src="_images/citrine.png" alt="Citrine" width="400" height="400">
+          <figcaption>This golden-yellow gemstone attracts positivity, abundance, and confidence.</figcaption>
+        </figure>
+        <p>Price: R50</p>
+      </article>
 
-    <article data-product-category="spiritual">
-      <h3>Hematite bracelet</h3>
-      <figure>
-        <img src="_images/Hematite.png" alt="Hematite" width="400" height="400">
-        <figcaption>It aids grounding, balance and mental clarity.</figcaption>
-      </figure>
-      <p>Price: R45</p>
-    </article>
-
+      <article data-product-category="spiritual">
+        <h3>Hematite Bracelet</h3>
+        <figure>
+          <img src="_images/Hematite.png" alt="Hematite" width="400" height="400">
+          <figcaption>It aids grounding, balance, and mental clarity.</figcaption>
+        </figure>
+        <p>Price: R45</p>
+      </article>
     </section>
 
+    <!-- Fashion -->
     <section data-category="fashion">
-      <h2>Fashion bracelets</h2>
+      <h2>Fashion Bracelets</h2>
+
       <article data-product-category="fashion">
-        <h3>Pink fusion bracelet</h3>
+        <h3>Pink Fusion Bracelet</h3>
         <figure>
-          <img src="_images/pinkFashionBracelet.jpg" alt="Pinky" width="400" height="400">
+          <img src="_images/pinkFashionBracelet.jpg" alt="Pink fusion" width="400" height="400">
           <figcaption>Luxury redefined in a shade of pink.</figcaption>
         </figure>
         <p>Price: R100</p>
       </article>
 
       <article data-product-category="fashion">
-        <h3>Smiley</h3>
+        <h3>Smiley Bracelet</h3>
         <figure>
           <img src="_images/smiley.jpeg" alt="smiley" width="400" height="400">
           <figcaption>Colourful bracelet with a smiley charm.</figcaption>
@@ -120,22 +147,24 @@
       </article>
 
       <article data-product-category="fashion">
-        <h3>Black stone</h3>
+        <h3>Black Stone Bracelet</h3>
         <figure>
           <img src="_images/customBlue.jpg" alt="Bluey" width="400" height="400">
-          <figcaption>Our fav bluey with elephant charms</figcaption>
+          <figcaption>Our favourite bluey with elephant charms.</figcaption>
         </figure>
         <p>Price: R90</p>
       </article>
     </section>
 
+    <!-- Custom -->
     <section data-category="custom">
-      <h2>Custom pieces</h2>
+      <h2>Custom Pieces</h2>
+
       <article data-product-category="custom">
-        <h3>White sabrina</h3>
+        <h3>White Sabrina</h3>
         <figure>
           <img src="_images/sabrina.jpg" alt="White" width="400" height="400">
-          <figcaption>Custom white piece named by my client</figcaption>
+          <figcaption>Custom white piece named by my client.</figcaption>
         </figure>
         <p>Price: R110</p>
       </article>
@@ -144,7 +173,7 @@
         <h3>Whitey</h3>
         <figure>
           <img src="_images/customWhite.jpg" alt="Custom grey" width="400" height="400">
-          <figcaption>Custom white bracelet named by a client</figcaption>
+          <figcaption>Custom white bracelet named by a client.</figcaption>
         </figure>
         <p>Price: R130</p>
       </article>
@@ -153,128 +182,93 @@
         <h3>Pinkry</h3>
         <figure>
           <img src="_images/PinkGrey.jpg" alt="Custom pink" width="400" height="400">
-          <figcaption>Custom pink and grey named Pinkry by my client</figcaption>
+          <figcaption>Custom pink and grey named Pinkry by my client.</figcaption>
         </figure>
         <p>Price: R120</p>
       </article>
     </section>
-    <br class="clearFix"> 
+
+    <br class="clearFix">
   </main>
 
   <footer>
-
-     <nav id="bottomLinks">
-        <ul>
-            <li class="currentPage">Home</li>
-            <li><a href="about.html">About </a></li>
-             <li class="currentPage">Products</li>
-            <li><a href="contact_us.html">Contact</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="Reviews.html">Reviews</a> </li>
-        </ul>
-        </nav>
+    <nav id="bottomLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="currentPage">Products</li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+      </ul>
+    </nav>
 
     <address>
-      Contact: <a href="dee@gmail.com">deesluckycharms@gmail.com</a><br>
+      Contact: <a href="mailto:deesluckycharms@gmail.com">deesluckycharms@gmail.com</a><br>
       Sandton, Johannesburg
     </address>
     <p>© 2025 Dee's Lucky Charms</p>
   </footer>
 
   <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Back to 🔝</button>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const filterDropdown = document.getElementById('categoryFilter');
-        const productArticles = document.querySelectorAll('main#products article');
-        const productSections = document.querySelectorAll('main#products section[data-category]'); // Exclude filter-controls
+      const filterDropdown = document.getElementById('categoryFilter');
+      const productArticles = document.querySelectorAll('main#products article');
+      const productSections = document.querySelectorAll('main#products section[data-category]');
 
-        // Function to filter the products
-        function filterProducts() {
-            const selectedCategory = filterDropdown.value;
+      function filterProducts() {
+        const selectedCategory = filterDropdown.value;
 
-            // 1. Iterate through all product articles (Visibility is already handled by section visibility, but we keep this for robustness)
-            productArticles.forEach(article => {
-                const articleCategory = article.getAttribute('data-product-category');
+        // Filter articles
+        productArticles.forEach(article => {
+          const articleCategory = article.getAttribute('data-product-category');
+          if (selectedCategory === 'all' || articleCategory === selectedCategory) {
+            article.classList.remove('hidden-product');
+          } else {
+            article.classList.add('hidden-product');
+          }
+        });
 
-                if (selectedCategory === 'all' || articleCategory === selectedCategory) {
-                    // Show the product
-                    article.classList.remove('hidden-product');
-                } else {
-                    // Hide the product
-                    article.classList.add('hidden-product');
-                }
-            });
+        // Adjust section visibility
+        productSections.forEach(section => {
+          const sectionCategory = section.getAttribute('data-category');
+          const heading = section.querySelector('h2');
 
-<<<<<<< HEAD
-            
-            productSections.forEach(section => {
-                const sectionCategory = section.getAttribute('data-category');
-                const heading = section.querySelector('h2'); 
-
-                if (selectedCategory === 'all') {
-                    
-=======
-            // 2. Adjust visibility of the main product sections and their headings
-            productSections.forEach(section => {
-                const sectionCategory = section.getAttribute('data-category');
-                const heading = section.querySelector('h2'); // Get the section heading
-
-                if (selectedCategory === 'all') {
-                    // A. When 'all' is selected:
-                    // Show the entire section (to keep all articles visible in the flow)
->>>>>>> 1d5f8bb (added interactive elements to all the web pages)
-                    section.classList.remove('hidden-product');
-                    
-                    // Hide the section heading (to remove separation)
-                    if (heading) {
-                        heading.classList.add('hidden-product'); // Use 'hidden-product' utility class from styles.css
-                    }
-                } else if (sectionCategory === selectedCategory) {
-                    //shows the entire section when it matches the selected category
-                    section.classList.remove('hidden-product');
-                    
-                    // Shows the section heading
-                    if (heading) {
-                        heading.classList.remove('hidden-product');
-                    }
-                } else {
-                    //hides the entire section if it doesn't match the selected category
-                    section.classList.add('hidden-product');
-                }
-            });
-        }
-
-        // Attach the filter function to the dropdown's change event
-        filterDropdown.addEventListener('change', filterProducts);
-        
-        // Initial call to ensure 'All Products' are shown on load (default state)
-        filterProducts();
-    });
-
-    // NEW: Back to Top Button Logic
-    let mybutton = document.getElementById("scrollToTopBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      // Check if the button element exists before trying to access its style
-      if (mybutton) {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
+          if (selectedCategory === 'all') {
+            section.classList.remove('hidden-product');
+            if (heading) heading.classList.add('hidden-product');
+          } else if (sectionCategory === selectedCategory) {
+            section.classList.remove('hidden-product');
+            if (heading) heading.classList.remove('hidden-product');
+          } else {
+            section.classList.add('hidden-product');
+          }
+        });
       }
-    }
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
+      filterDropdown.addEventListener('change', filterProducts);
+      filterProducts(); // show all by default
+
+      // Back to top button
+      const mybutton = document.getElementById("scrollToTopBtn");
+
+      window.onscroll = function() {
+        if (mybutton) {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+      };
+
+      window.topFunction = function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      };
+    });
   </script>
-
 </body>
 </html>
