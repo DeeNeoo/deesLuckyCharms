@@ -221,7 +221,7 @@
       function filterProducts() {
         const selectedCategory = filterDropdown.value;
 
-        // Filter articles
+       
         productArticles.forEach(article => {
           const articleCategory = article.getAttribute('data-product-category');
           if (selectedCategory === 'all' || articleCategory === selectedCategory) {
@@ -231,7 +231,7 @@
           }
         });
 
-        // Adjust section visibility
+        
         productSections.forEach(section => {
           const sectionCategory = section.getAttribute('data-category');
           const heading = section.querySelector('h2');
@@ -249,9 +249,9 @@
       }
 
       filterDropdown.addEventListener('change', filterProducts);
-      filterProducts(); // show all by default
+      filterProducts(); 
 
-      // Back to top button
+      
       const mybutton = document.getElementById("scrollToTopBtn");
 
       window.onscroll = function() {

@@ -160,11 +160,11 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
       
-      // NEW JAVASCRIPT FOR INTERACTIVE DELIVERY PIN
+      
       const deliveryPin = document.getElementById('delivery-pin');
       const deliveryDisplay = document.getElementById('delivery-details-display');
       
-      // Delivery options (combined)
+      
       const deliveryOptionsHTML = `
           <h3>🚚 Nationwide Delivery Options:</h3>
           <ul>
@@ -179,19 +179,19 @@
 
       if (deliveryPin && deliveryDisplay) {
           
-          // Inject content once
+          
           deliveryDisplay.innerHTML = deliveryOptionsHTML;
           
-          // Click Handler: Toggle display
+          
           deliveryPin.addEventListener('click', function() {
               deliveryDisplay.classList.toggle('hidden');
               
               const tooltip = document.getElementById('pin-tooltip');
               if (!deliveryDisplay.classList.contains('hidden')) {
-                  // If showing, update tooltip
+                  
                   tooltip.textContent = 'Click to Hide Details';
               } else {
-                  // If hiding, reset tooltip
+                  
                   tooltip.textContent = 'Click for Delivery Options';
               }
           });

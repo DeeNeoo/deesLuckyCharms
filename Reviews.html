@@ -144,7 +144,7 @@
             reviewCarousel.classList.remove('review-active');
             
             setTimeout(() => {
-            // Function to generate the filled stars HTML
+          
             const starsHtml = '<div class="review-stars">' + 
                               '&#9733;'.repeat(review.rating) + 
                               '&#9734;'.repeat(5 - review.rating) + 
@@ -187,7 +187,7 @@
         startAutoSlide();
 
 
-    // Star Rating Interactivity
+    
     const starRating = document.getElementById('star-rating');
     const ratingText = document.getElementById('rating-text');
     const ratingInput = document.querySelectorAll('#star-rating input[name="rating"]');
@@ -200,16 +200,16 @@
         '1': 'Poor'
     };
 
-    // Function to handle the visual change on hover (previewing a selection)
+    
     starRating.addEventListener('mousemove', function(e) {
-        // Only trigger on labels
+        
         if (e.target.tagName === 'LABEL') {
             const starValue = e.target.previousElementSibling.value;
             ratingText.textContent = ratingMap[starValue] || 'Select a rating';
         }
     });
 
-    // Function to reset the text when mouse leaves the star area
+    
     starRating.addEventListener('mouseleave', function() {
         let checkedValue = null;
         ratingInput.forEach(input => {
@@ -220,14 +220,14 @@
         ratingText.textContent = checkedValue ? ratingMap[checkedValue] : 'Select a rating';
     });
 
-    // Function to handle the actual selection
+    
     ratingInput.forEach(input => {
         input.addEventListener('change', function() {
             ratingText.textContent = ratingMap[this.value];
         });
     });
 
-    // Initial text setting
+    
     let initialChecked = false;
     ratingInput.forEach(input => {
         if (input.checked) {
@@ -240,7 +240,7 @@
     }
 
 
-    // Form Submission (Placeholder for actual submission)
+    
     const reviewForm = document.getElementById('reviewForm');
     reviewForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -248,7 +248,7 @@
         const nameInput = document.getElementById('reviewName');
         const rating = document.querySelector('#star-rating input[name="rating"]:checked');
         
-        // Basic form validation for non-star fields
+        
         if (nameInput.value.trim().length < 3 || document.getElementById('reviewEmail').value.trim() === '' || document.getElementById('reviewMessage').value.trim() === '') {
              alert('Please fill out all required fields.');
              return;
@@ -257,7 +257,7 @@
         if (rating) {
             alert(`Thank you, ${nameInput.value}! Your ${rating.value}-star review has been successfully submitted (simulated).`);
             reviewForm.reset();
-            // Manually reset radio buttons and text
+            
             ratingInput.forEach(input => input.checked = false);
             ratingText.textContent = 'Select a rating'; 
         } else {

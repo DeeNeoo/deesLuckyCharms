@@ -195,21 +195,18 @@
         
         charmContainer.innerHTML = charmHTML;
     }
-
-    // Display immediately on load
+//the time (seconds) that the charm changes
     displayRandomCharm();
+    setInterval(displayRandomCharm, 2000);
 
-    // Set an interval to switch the suggestion every 10 seconds (10000ms)
-    setInterval(displayRandomCharm, 10000);
 
-// Lightbox Modal for Suggested Charm Image
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const captionText = document.getElementById('image-caption');
     
-    // Function to open the lightbox
+    
     window.openLightbox = function(imageSrc, caption, event) {
-        // Stop the click event from propagating to the lightbox background (if called from a child element)
+        
         if (event) {
             event.stopPropagation();
         }
@@ -218,17 +215,17 @@
         lightboxImg.alt = caption;
         captionText.innerHTML = caption; 
         lightbox.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        document.body.style.overflow = 'hidden'; 
     }
 
-    // Function to close the lightbox
+    
     window.closeLightbox = function(event) {
-        // Prevent closing if the click originated from the image itself
+        
         if (event && event.target.tagName === 'IMG') {
              return;
         }
         lightbox.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflow = 'auto'; 
     } 
     
     window.addEventListener('load', displayRandomCharm);
