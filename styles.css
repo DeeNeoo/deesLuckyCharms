@@ -1220,3 +1220,91 @@ main#about {
     font-size: 0.95rem;
     font-family: monospace;
 }
+
+/*Responsive breakpoints*/
+
+/* MEDIUM SCREENS (TABLETS) */
+@media (max-width: 992px) {
+    header, main, footer {
+        max-width: 95%; 
+    }
+
+    h1, h2 {
+        font-size: 3rem; 
+    }
+    
+    #topLinks ul, #bottomLinks ul {
+        gap: 2em; 
+    }
+    
+    #products section > article {
+        flex: 1 1 250px; 
+        max-width: 300px;
+    }
+}
+
+
+/*SMALL SCREENS (MOBILE) */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+    #topLinks ul, #bottomLinks ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #topLinks a, #bottomLinks a {
+        padding: 0.5rem;
+        display: block;
+        text-align: center;
+    }
+    .logo {
+        width: 15%; 
+        height: 15%;
+    }
+    
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+    .hero h1 { 
+        font-size: 2.5rem;
+    }
+    .hero p { 
+        font-size: 1.1rem;
+    }
+
+    #products section { 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #products section > article { 
+        flex: 1 1 100%; 
+        max-width: 90%;
+    }
+    
+    #charmDetails {
+        flex-wrap: wrap; 
+        text-align: center;
+    }
+    .charm-text-content, .charm-image-content {
+        order: initial; 
+        flex: 1 1 100%;
+    }
+    
+    main#about, #reviews, #products, #contact, #enquiry {
+        padding: 1rem 0.5rem;
+    }
+    #about section {
+        width: auto;
+    }
+    
+    #contact section, #enquiry section {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .review-card {
+        width: 90vw; 
+        max-width: 300px;
+    }
+}
