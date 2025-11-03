@@ -123,14 +123,35 @@ Organized pseudo-classes in LVHA order (Link, Visited, Hover, Active)
 Maintained proper specificity throughout
 Added comprehensive comments for navigation sections
 
+#### Fixed:
+Responsive breakpoints across all major device sizes, including small phones, tablets, and laptops.
+
+#### Details:
+Adjusted CSS media queries to ensure consistent layout behavior and proper scaling of text, images, and navigation elements.
+Ensured that navigation automatically switches to a vertical layout on smaller screens and displays horizontally on laptops and larger devices.
+Optimized margins, padding, and font sizes for better readability and spacing on all screen resolutions.
+Verified that all sections of the webpage (header, hero section, content areas, and footer) align properly and maintain visual balance across breakpoints.
+
+#### Result: 
+The website is now fully responsive — content dynamically adapts to different screen sizes, providing an improved and consistent user experience across mobile, tablet, and desktop devices.
+
+#### Examples:
+small screen
+![alt text](image-12.png)
+
+medium screen
+![alt text](image-13.png)
+
+big screen
+![alt text](image-14.png)
 
 # 9.Test and iteration
 ## 1. Smart phone/small screen
 
 home page:
-![top nav links](<Screenshot 2025-09-29 120510.png>)
-![main](<Screenshot 2025-09-29 120558.png>)
-![bottom nav links](<Screenshot 2025-09-29 120649.png>)
+![alt text](<Screenshot 2025-09-29 120510.png>)
+![alt text](<Screenshot 2025-09-29 120558.png>)
+![alt text](<Screenshot 2025-09-29 120649.png>)
 
 products page:
 ![alt text](<Screenshot 2025-09-29 120701.png>)
@@ -167,7 +188,6 @@ Enquiries page:
 
 Reviews page:
 ![alt text](<Screenshot 2025-09-29 122202.png>)
-
 ## 3. Desktop/ big screens
 
 Home page:
