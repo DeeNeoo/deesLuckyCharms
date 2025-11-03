@@ -6,8 +6,12 @@ Dineo Tukakgomo
 ST10490306
 WEDE5020 POE Part 1
 
-# 3. Github repository link
+# 3. Github repository links
+this link only contains part 2 and 1 work:
 https://github.com/DeeNeoo/deesLuckyCharms/tree/master
+
+this link contains all the part 3 work:
+https://github.com/DeeNeoo/deesLuckyCharms/tree/main
 
 # 4. Website goals and objectives
 
@@ -213,6 +217,8 @@ Enquiries page:
 Reviews page:
 ![alt text](image-10.png)
 ![alt text](image-11.png)
+
+
 
 # 10. References
 
