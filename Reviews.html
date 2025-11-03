@@ -37,253 +37,235 @@
         <p>Read what customers say about our charms — and leave your own review below. ✨</p>
       </header>
 
-      <aside aria-labelledby="featured-reviews-heading" class="review-carousel-container section-style">
-        <h3 id="featured-reviews-heading">⭐ Featured Feedback ⭐</h3>
-        <div class="review-carousel" id="reviewCarousel">
-            </div>
-        <div class="carousel-nav">
-            <button id="prevReviewBtn" aria-label="Previous Review">←</button>
-            <div id="reviewIndicators" class="review-indicators">
-                </div>
-            <button id="nextReviewBtn" aria-label="Next Review">→</button>
+      <aside aria-labelledby="review-carousel-heading">
+        <h3 id="review-carousel-heading">Featured Reviews</h3>
+        <div id="review-carousel-container">
+          <button id="prevBtn" aria-label="Previous Review">&lt;</button>
+          <div id="review-carousel" class="review-active">
+              </div>
+          <button id="nextBtn" aria-label="Next Review">&gt;</button>
         </div>
+        <div class="indicator-container"></div>
       </aside>
-
-      <section aria-labelledby="all-reviews-heading" class="all-reviews-section section-style">
-        <h3 id="all-reviews-heading">All Customer Testimonials</h3>
-        <ol class="review-list">
-          <li class="review-item">
-            <p class="review-quote">"The Pink Fusion bracelet is even more beautiful in person! Great quality and it arrived so quickly. Highly recommend."</p>
-            <p class="review-author">— Sarah M.</p>
-          </li>
-          <li class="review-item">
-            <p class="review-quote">"My Citrine charm feels like a little ray of sunshine. I wear it every day and always get compliments!"</p>
-            <p class="review-author">— Thembi L.</p>
-          </li>
-          <li class="review-item">
-            <p class="review-quote">"I was skeptical about ordering jewelry online, but the Tiger's Eye bracelet is solid and the craftsmanship is superb. Fantastic value."</p>
-            <p class="review-author">— Ryan P.</p>
-          </li>
-          <li class="review-item">
-            <p class="review-quote">"Such a thoughtful gift! The packaging was gorgeous, and the charm itself is a perfect little token of luck."</p>
-            <p class="review-author">— Zola K.</p>
-          </li>
-        </ol>
-      </section>
-      
-      <hr>
-
-      <section aria-labelledby="submit-review-heading" class="review-form-section section-style">
-        <h3 id="submit-review-heading">Leave Your Own Review!</h3>
-        <form id="reviewForm" class="review-form">
-            <p>
-                <label for="reviewerName">Your Name:</label>
-                <input type="text" id="reviewerName" name="reviewerName" required minlength="2">
-            </p>
-            <p>
-                <label>Rating (1-5 Stars):</label>
-                <div class="star-rating" role="radiogroup" aria-label="Star Rating" id="starRatingContainer">
-                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
-                </div>
-            </p>
-            <p>
-                <label for="reviewText">Your Review:</label>
-                <textarea id="reviewText" name="reviewText" rows="5" required maxlength="300"></textarea>
-                <small><span id="charCount">300</span> characters remaining.</small>
-            </p>
-            <button type="submit">Submit Review</button>
-            <div id="formMessage" class="form-message"></div>
-        </form>
-      </section>
-      
+      <br class="clearFix">
     </section>
-    <br class="clearFix"> 
+    
+    <section id="review-submission" aria-labelledby="review-form-heading">
+      <header>
+        <h3 id="review-form-heading">Leave Your Review</h3>
+        <p>Share your experience and let us know how we did! ✨</p>
+      </header>
+      <form id="reviewForm" action="#">
+        <p>
+          <label for="reviewName">Your Name:</label>
+          <input type="text" id="reviewName" name="reviewName" required minlength="3">
+        </p>
+        <p>
+          <label for="reviewEmail">Your Email:</label>
+          <input type="email" id="reviewEmail" name="reviewEmail" required>
+        </p>
+        
+        <div class="rating-box">
+            <label>Your Rating:</label>
+            <div id="star-rating" class="star-rating-area">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">&#9733;</label>
+                <span id="rating-text">Select a rating</span>
+            </div>
+        </div>
+
+        <p>
+          <label for="reviewMessage">Your Review (Max 500 chars):</label>
+          <textarea id="reviewMessage" name="reviewMessage" rows="5" maxlength="500" required></textarea>
+        </p>
+        
+        <p>
+          <button type="submit">Submit Review</button>
+        </p>
+      </form>
+    </section>
+
   </main>
 
   <footer>
 
-       <nav id="bottomLinks">
+    <nav id="bottomLinks">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
             <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact_us.html">Contact</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
-            <li class="currentPage">Reviews</li>
         </ul>
         </nav>
 
 
-    <section aria-labelledby="contact-heading">
-      <h4 id="contact-heading">Contact</h4>
-      <address>
-        Dee's Lucky Charms — Sandton, Johannesburg<br />
-        <a href="dee@gmail.com">hello@deesluckcharms.example</a>
-      </address>
-    </section>
-
-    <p>&copy; <time datetime="2025">2025</time> Dee's Lucky Charms. All rights reserved.</p>
+    <address>
+      Contact: <a href="deesluckycharms@gmail.com">deesluckycharms@gmail.com</a><br>
+      Sandton, Johannesburg
+      <p>There is currently no physical store. Only online orders.</p>
+    </address>
+    <p>© 2025 Dee's Lucky Charms</p>
   </footer>
 
-  <button id="scrollToTopBtn" title="Go to top">Back to 🔝</button>
-
   <script>
-  
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
-    // --- Scroll to Top Logic (Retained) ---
-    window.onscroll = function() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
-      } else {
-        scrollToTopBtn.style.display = "none";
-      }
-    };
-    
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // --- Review Form Logic (UPDATED for Star Rating) ---
-    const reviewForm = document.getElementById('reviewForm');
-    const formMessage = document.getElementById('formMessage');
-    const reviewerNameInput = document.getElementById('reviewerName');
-    const reviewTextarea = document.getElementById('reviewText');
-    const charCountSpan = document.getElementById('charCount');
-    const maxChars = 300;
-    const starRatingContainer = document.getElementById('starRatingContainer');
-    const ratingInputs = document.querySelectorAll('input[name="rating"]');
+    document.addEventListener('DOMContentLoaded', function() {
+        const reviews = [
+            { quote: "Absolutely love my new bracelet! It arrived quickly and the quality is fantastic. Highly recommend Dee's Lucky Charms!", author: "Tanya M.", image: "_images/review.jpg", rating: 3 },
+            { quote: "The charm is exactly as pictured, and the detail is amazing. It's a perfect gift. Will definitely buy again!", author: "Sipho D.", image: "_images/rev.jpg", rating: 4 },
+            { quote: "Great customer service and beautiful, unique products. My lucky charm brings me so much joy. Five stars!", author: "Lebo R.", image: "_images/reve.jpg", rating: 5 }
+        ];
 
-    // --- NEW: JS Styling & Dynamic Feedback ---
-    
-    // 1. Input Focus/Blur Styling
-    [reviewerNameInput, reviewTextarea].forEach(input => {
-        input.addEventListener('focus', () => {
-            input.classList.add('input-focused');
-        });
-        input.addEventListener('blur', () => {
-            input.classList.remove('input-focused');
-        });
-    });
+        let currentReviewIndex = 0;
+        let autoSlideInterval;
 
-    // 2. Real-time Character Count
-    reviewTextarea.addEventListener('input', () => {
-        const remaining = maxChars - reviewTextarea.value.length;
-        charCountSpan.textContent = remaining;
-        
-        if (remaining < 0) {
-            charCountSpan.style.color = 'rgb(71, 8, 8)'; // Red/Maroon
-            charCountSpan.parentElement.style.fontWeight = 'bold';
-        } else if (remaining <= 50) {
-            charCountSpan.style.color = 'orange';
-            charCountSpan.parentElement.style.fontWeight = 'normal';
-        } else {
-            charCountSpan.style.color = 'rgb(17, 66, 46)'; // Dark Green
-            charCountSpan.parentElement.style.fontWeight = 'normal';
-        }
-    });
+        const reviewCarousel = document.getElementById('review-carousel');
+        const indicatorContainer = document.querySelector('.indicator-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
 
-    // 3. Dynamic Star Rating Feedback
-    ratingInputs.forEach(input => {
-        input.addEventListener('change', () => {
-            // Add a class to the container when a rating is selected
-            starRatingContainer.classList.add('rating-selected');
-        });
-    });
-
-    // 4. Form Submission Logic
-    reviewForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const name = reviewerNameInput.value.trim();
-        const ratingInput = reviewForm.querySelector('input[name="rating"]:checked');
-        const rating = ratingInput ? parseInt(ratingInput.value) : 0;
-        const reviewText = reviewTextarea.value.trim();
-
-        if (name.length < 2 || rating === 0 || reviewText.length === 0 || reviewText.length > maxChars) {
-            formMessage.textContent = 'Please complete all fields correctly (Name, Star Rating, Review text, and check the character limit).';
-            formMessage.style.color = 'rgb(71, 8, 8)';
-            return;
+        function createIndicators() {
+            reviews.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('indicator-dot');
+                dot.addEventListener('click', () => showReview(index));
+                indicatorContainer.appendChild(dot);
+            });
         }
 
-        // Simulate successful submission
-        formMessage.textContent = 'Thank you for your review! It has been submitted for approval.';
-        formMessage.style.color = 'rgb(17, 66, 46)';
-        reviewForm.reset(); // Clear the form
-        starRatingContainer.classList.remove('rating-selected'); // Clear JS rating styling
-        reviewTextarea.dispatchEvent(new Event('input')); // Reset character count display
+        function showReview(index) {
+            currentReviewIndex = (index + reviews.length) % reviews.length;
+            const review = reviews[currentReviewIndex];
 
-        // Clear message after 5 seconds
-        setTimeout(() => formMessage.textContent = '', 5000); 
-    });
-    
-    // --- Review Carousel Logic (Retained) ---
-    const reviews = [
-        { quote: "The **Pink Fusion** bracelet is even more beautiful in person! Great quality and it arrived so quickly.", author: "Sarah M." },
-        { quote: "My **Citrine charm** feels like a little ray of sunshine. I wear it every day and always get compliments!", author: "Thembi L." },
-        { quote: "The craftsmanship is superb. Fantastic value and the **Tiger's Eye** is a classic.", author: "Ryan P." },
-        { quote: "Such a thoughtful gift! The packaging was gorgeous, and the charm itself is a perfect little token of luck.", author: "Zola K." }
-    ];
+            reviewCarousel.classList.remove('review-active');
+            
+            setTimeout(() => {
+            // Function to generate the filled stars HTML
+            const starsHtml = '<div class="review-stars">' + 
+                              '&#9733;'.repeat(review.rating) + 
+                              '&#9734;'.repeat(5 - review.rating) + 
+                              '</div>';
 
-    let currentReviewIndex = 0;
-    const reviewCarousel = document.getElementById('reviewCarousel');
-    const prevBtn = document.getElementById('prevReviewBtn');
-    const nextBtn = document.getElementById('nextReviewBtn');
-    const indicatorContainer = document.getElementById('reviewIndicators');
-    let autoSlideInterval;
-
-    function createIndicators() {
-        reviews.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.classList.add('indicator-dot');
-            dot.addEventListener('click', () => showReview(index));
-            indicatorContainer.appendChild(dot);
-        });
-    }
-
-    function showReview(index) {
-        currentReviewIndex = (index + reviews.length) % reviews.length;
-        const review = reviews[currentReviewIndex];
-
-        reviewCarousel.classList.remove('review-active');
-        
-        setTimeout(() => {
             reviewCarousel.innerHTML = `
+                <div class="review-header">
+                    <img src="${review.image}" alt="Product featured in review" class="review-image">
+                    ${starsHtml}
+                </div>
                 <p class="review-quote">${review.quote}</p>
                 <p class="review-author">— ${review.author}</p>
             `;
             reviewCarousel.classList.add('review-active');
-            
-            document.querySelectorAll('.indicator-dot').forEach((dot, i) => {
-                dot.classList.toggle('active-dot', i === currentReviewIndex);
-            });
-            
-        }, 300); 
-    }
+                
+                document.querySelectorAll('.indicator-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active-dot', i === currentReviewIndex);
+                });
+                
+            }, 300); 
+        }
 
-    function startAutoSlide() {
-        clearInterval(autoSlideInterval); 
-        autoSlideInterval = setInterval(() => showReview(currentReviewIndex + 1), 6000); 
-    }
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval); 
+            autoSlideInterval = setInterval(() => showReview(currentReviewIndex + 1), 6000); 
+        }
 
-    prevBtn.addEventListener('click', () => {
-        showReview(currentReviewIndex - 1);
+        prevBtn.addEventListener('click', () => {
+            showReview(currentReviewIndex - 1);
+            startAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showReview(currentReviewIndex + 1);
+            startAutoSlide();
+        });
+
+        createIndicators();
+        showReview(0);
         startAutoSlide();
+
+
+    // Star Rating Interactivity
+    const starRating = document.getElementById('star-rating');
+    const ratingText = document.getElementById('rating-text');
+    const ratingInput = document.querySelectorAll('#star-rating input[name="rating"]');
+
+    const ratingMap = {
+        '5': 'Excellent!',
+        '4': 'Very Good',
+        '3': 'Good',
+        '2': 'Fair',
+        '1': 'Poor'
+    };
+
+    // Function to handle the visual change on hover (previewing a selection)
+    starRating.addEventListener('mousemove', function(e) {
+        // Only trigger on labels
+        if (e.target.tagName === 'LABEL') {
+            const starValue = e.target.previousElementSibling.value;
+            ratingText.textContent = ratingMap[starValue] || 'Select a rating';
+        }
     });
 
-    nextBtn.addEventListener('click', () => {
-        showReview(currentReviewIndex + 1);
-        startAutoSlide();
+    // Function to reset the text when mouse leaves the star area
+    starRating.addEventListener('mouseleave', function() {
+        let checkedValue = null;
+        ratingInput.forEach(input => {
+            if (input.checked) {
+                checkedValue = input.value;
+            }
+        });
+        ratingText.textContent = checkedValue ? ratingMap[checkedValue] : 'Select a rating';
     });
 
-    createIndicators();
-    showReview(0);
-    startAutoSlide();
-    reviewTextarea.dispatchEvent(new Event('input')); // Initialize count
+    // Function to handle the actual selection
+    ratingInput.forEach(input => {
+        input.addEventListener('change', function() {
+            ratingText.textContent = ratingMap[this.value];
+        });
+    });
+
+    // Initial text setting
+    let initialChecked = false;
+    ratingInput.forEach(input => {
+        if (input.checked) {
+            ratingText.textContent = ratingMap[input.value];
+            initialChecked = true;
+        }
+    });
+    if (!initialChecked) {
+        ratingText.textContent = 'Select a rating';
+    }
+
+
+    // Form Submission (Placeholder for actual submission)
+    const reviewForm = document.getElementById('reviewForm');
+    reviewForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nameInput = document.getElementById('reviewName');
+        const rating = document.querySelector('#star-rating input[name="rating"]:checked');
+        
+        // Basic form validation for non-star fields
+        if (nameInput.value.trim().length < 3 || document.getElementById('reviewEmail').value.trim() === '' || document.getElementById('reviewMessage').value.trim() === '') {
+             alert('Please fill out all required fields.');
+             return;
+        }
+
+        if (rating) {
+            alert(`Thank you, ${nameInput.value}! Your ${rating.value}-star review has been successfully submitted (simulated).`);
+            reviewForm.reset();
+            // Manually reset radio buttons and text
+            ratingInput.forEach(input => input.checked = false);
+            ratingText.textContent = 'Select a rating'; 
+        } else {
+            alert('Please select a star rating.');
+        }
+    });
+    
+});
   </script>
 
 </body>

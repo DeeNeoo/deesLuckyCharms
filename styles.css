@@ -880,134 +880,318 @@ main#about {
 }
 
 #reviews main {
-    max-width: 56.25rem;
+    padding: 20px;
+    background-color: transparent; 
+    border-radius: 0;
+    max-width: 900px;
     margin: auto;
-    background-color: black;
-    border-radius: 1rem;
 }
+
+/* General Review Section Container Styling */
+#reviews section {
+    background-color: rgb(255, 255, 255); /* White background */
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    border: 4px solid rgb(17, 66, 46); /* Dark Green Frame */
+    transition: transform 0.3s ease;
+}
+#reviews section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
 #reviews h2, #reviews h3 {
-    color: rgb(17, 66, 46);
-    margin-bottom: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(17, 66, 46); /* DARK GREEN for Headings (Replaced Burgundy) */
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px dashed rgb(201, 241, 211); /* Light Green dashed separator */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
 }
-#reviews p {
-    margin: 0.625rem 0;
-    color: rgb(71, 8, 8);
+#reviews section > header p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
+/* Review Carousel Section (Featured Reviews) - Dark Block */
 #reviews aside {
-    background-color: rgb(17, 66, 46);
-    padding: 1rem;
-    margin: 1rem;
-    text-align: justify;
+    background-color: rgb(17, 66, 46); /* DARK GREEN Background (Replaced Burgundy) */
+    padding: 25px;
+    margin: 1rem 0;
+    border-radius: 10px;
+    color: rgb(201, 241, 211); /* Light Text Color */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    /* Reset aside styles from old version */
+    text-align: center;
+    font-weight: normal; 
+    font-size: 1rem;
+}
+.review-quote {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+.review-author {
+    text-align: right;
     font-weight: bold;
-    font-size: 1.125rem;
+    color: rgb(201, 241, 211);
+    margin-top: 0.5rem;
 }
 
-#reviews form {
-    margin-top: 1.5rem;
+/* Review Submission Form Styling */
+#review-submission {
+    background-color: rgb(235, 250, 240); /* Soft Mint Green Background */
+    border: 4px solid rgb(17, 66, 46); /* Dark Green Frame */
+    box-shadow: 0 8px 20px rgba(17, 66, 46, 0.4);
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
 }
 
-#reviews fieldset {
-    border: 0.063rem solid rgb(201, 241, 211);
-    padding: 1rem;
-    border-radius: 0.5rem;
+#reviewForm p {
+    margin-bottom: 1rem;
 }
-#reviews legend {
-    font-weight: bold;
-    color: rgb(107, 141, 127);
-    font-size: 1.125rem;
-}
-#reviews label {
+
+#reviewForm label {
     display: block;
-    margin-bottom: 0.625rem;
-    font-weight: 500;
-    font-size: 1rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgb(17, 66, 46); /* DARK GREEN (Replaced Burgundy) */
+    margin-bottom: 5px;
 }
 
-#reviews input[type="text"],
-#reviews input[type="email"],
-#reviews input[type="number"],
-#reviews textarea {
+#reviewForm input[type="text"],
+#reviewForm input[type="email"],
+#reviewForm textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    border-radius: 0.5rem;
-    border: 0.063rem solid rgb(107, 141, 127);
+    padding: 10px;
+    border: 2px solid rgb(17, 66, 46);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
 }
-
-#reviews input[type="text"]:focus,
-#reviews input[type="email"]:focus,
-#reviews input[type="number"]:focus,
-#reviews textarea:focus {
-    outline: 2px solid rgb(17, 66, 46);
-    border-color: rgb(17, 66, 46);
-    box-shadow: 0 0 5px rgba(17, 66, 46, 0.5);
-}
-
-#reviews textarea {
+#reviewForm textarea {
     resize: vertical;
 }
 
-#reviews button {
-    padding: 0.625rem 1.25rem;
-    margin-right: 0.625rem;
-    background-color: rgb(107, 141, 127);
-    color: black;
+#reviewForm button[type="submit"] {
+    background-color: rgb(17, 66, 46); /* DARK GREEN (Replaced Burgundy) */
+    color: rgb(201, 241, 211);
+    padding: 10px 20px;
     border: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.4s;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 4px;
-}
-
-#reviews button:hover {
-    background-color: rgb(2, 0, 0);
-    color: rgb(107, 141, 127);
-    transform: translateY(-2px);
-}
-
-#reviews button:active {
-    transform: translateY(0);
-}
-
-#reviews button:focus {
-    outline: 2px solid rgb(201, 241, 211);
-    outline-offset: 2px;
-}
-
-#reviews ol {
-    list-style: decimal inside;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
     margin-top: 1rem;
 }
 
-#reviews article {
-    background-color: rgb(107, 141, 127);
-    padding: 1rem;
-    margin-bottom: 1rem;
+#reviewForm button[type="submit"]:hover {
+    background-color: rgb(71, 8, 8); /* Added Burgundy back for hover contrast */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-#reviews article header h4 {
-    color: rgb(107, 141, 127);
-    margin-bottom: 0.25rem;
-    font-size: 1.125rem;
+
+
+/* ================================================================
+   STAR RATING SYSTEM STYLING
+   ================================================================ */
+
+.rating-box {
+    margin: 1.5rem 0;
+    text-align: center;
+    border: 2px solid rgb(17, 66, 46);
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
 }
-#reviews article figure {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 0.625rem;
-    width: 5rem;
-    height: 5rem;
+
+.star-rating-area {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
 }
-#reviews article figure img {
-    width: 100%;
-    height: 100%;
+
+.star-rating-area input {
+    display: none;
+}
+
+.star-rating-area label {
+    font-size: 2.8rem;
+    color: #ccc; 
+    cursor: pointer;
+    margin: 0 2px;
+    transition: color 0.2s ease, transform 0.1s;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Hover effect: color all stars up to the hovered one */
+.star-rating-area label:hover,
+.star-rating-area label:hover ~ label {
+    color: gold;
+    transform: scale(1.1);
+}
+
+/* Selected/Checked state: color all stars up to the selected one (highest specificity) */
+.star-rating-area input:checked ~ label {
+    color: gold !important; 
+}
+/* Visual feedback for a selected state: slightly brighter/different shadow */
+.star-rating-area input:checked + label {
+    text-shadow: 0 0 5px orange;
+}
+
+/* Rating Text Display */
+#rating-text {
+    position: absolute;
+    top: -35px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(17, 66, 46); /* DARK GREEN Background (Replaced Burgundy) */
+    color: rgb(201, 241, 211);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: none; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================================================
+   STAR RATING SYSTEM STYLING
+   ================================================================ */
+
+.rating-box {
+    margin: 1.5rem 0;
+    text-align: center;
+    border: 2px solid rgb(17, 66, 46);
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+.star-rating-area {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.star-rating-area input {
+    display: none;
+}
+
+.star-rating-area label {
+    font-size: 2.8rem; /* Slightly larger stars */
+    color: #ccc; 
+    cursor: pointer;
+    margin: 0 2px;
+    transition: color 0.2s ease, transform 0.1s;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Hover effect: color all stars up to the hovered one */
+.star-rating-area label:hover,
+.star-rating-area label:hover ~ label {
+    color: gold;
+    transform: scale(1.1);
+}
+
+/* Selected/Checked state: color all stars up to the selected one */
+.star-rating-area input:checked ~ label {
+    color: gold;
+}
+.star-rating-area input:checked ~ label:hover,
+.star-rating-area input:checked ~ label:hover ~ label {
+    color: gold; /* Maintain color on hover after selection */
+}
+
+/* Rating Text Display */
+#rating-text {
+    position: absolute;
+    top: -35px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(71, 8, 8); /* Dark Brown/Red Background */
+    color: rgb(201, 241, 211);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: none; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Review Carousel Content Styles */
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(201, 241, 211, 0.5);
+}
+
+.review-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 2px solid rgb(201, 241, 211);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
-#reviews article footer p {
-    font-size: 0.875rem;
-    color: rgb(107, 141, 127);
+
+.review-stars {
+    font-size: 1.5rem;
+    color: gold;
+    letter-spacing: 2px;
+}
+
+/* ================================================================
+   STAR RATING SYSTEM FIX: Ensure selected stars are not affected by hover
+   ================================================================ */
+
+/* Selected/Checked state: color all stars up to the selected one (highest specificity) */
+.star-rating-area input:checked ~ label {
+    color: gold !important; /* This is the fix: use !important to override the hover state */
+}
+/* Visual feedback for a selected state: slightly brighter/different shadow */
+.star-rating-area input:checked + label {
+    text-shadow: 0 0 5px orange;
+}
+
+/* Keep the normal hover color gold */
+.star-rating-area label:hover,
+.star-rating-area label:hover ~ label {
+    color: gold;
+}
+
+/* Ensure unselected stars don't retain color when not hovered */
+.star-rating-area label {
+    color: #ccc;
 }
 
 /* CSS for the Scroll-to-Top Button */
