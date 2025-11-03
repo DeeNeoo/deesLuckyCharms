@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /contact_us.html
+Disallow: /enquiry.html
+Disallow: /Reviews.html
+Disallow: /scripts/
+Disallow: /_images/
+Allow: /index.html
+Allow: /about.html
+Allow: /products.html
+
+Sitemap: https://deesluckycharmns.co.za/sitemap.xml
+
