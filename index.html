@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+   
+        // Optionally close with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape" && lightbox.style.display === 'block') {
+                closeLightbox();
+            }
+        });
+ <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dee's Lucky Charms Home Page</title>
     <link rel="stylesheet" href="styles.css">
@@ -56,7 +63,16 @@
         <section>
           <p>Dee's Lucky Charms is a small business dedicated to creating unique, handcrafted charms and jewellery that bring a touch of luck and joy to your life. Each piece is thoughtfully designed and made with care, ensuring that you receive a product that is not only beautiful but also meaningful. Whether you're looking for a special gift or a personal talisman, Dee's Lucky Charms has something for everyone. Explore our collection and find the perfect charm to inspire and delight you!</p>
         </section>
-    </main>
+    
+        
+
+      <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+          <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+          <img class="lightbox-content" id="lightboxImg">
+          <div id="image-caption" class="caption"></div>
+      </div>
+
+</main>
   
 
   <footer>
@@ -178,7 +194,7 @@
                 <p class="charm-suggestion-description">${charm.description}</p>
                 <a href="${charm.link}" class="cta-btn">Discover More</a>
             </div>
-            <div class="charm-image-content">
+            <div class="charm-image-content clickable-charm" onclick="openLightbox('${charm.image}', '${charm.name}', event)">
                 <img src="${charm.image}" alt="${charm.name}" class="charm-suggestion-img">
             </div>
         `;
@@ -191,7 +207,36 @@
     displayRandomCharm();
 
     // Set an interval to switch the suggestion every 10 seconds (10000ms)
-    setInterval(displayRandomCharm, 10000); 
+    setInterval(displayRandomCharm, 10000);
+
+// Lightbox Modal for Suggested Charm Image
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const captionText = document.getElementById('image-caption');
+    
+    // Function to open the lightbox
+    window.openLightbox = function(imageSrc, caption, event) {
+        // Stop the click event from propagating to the lightbox background (if called from a child element)
+        if (event) {
+            event.stopPropagation();
+        }
+
+        lightboxImg.src = imageSrc;
+        lightboxImg.alt = caption;
+        captionText.innerHTML = caption; 
+        lightbox.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+    }
+
+    // Function to close the lightbox
+    window.closeLightbox = function(event) {
+        // Prevent closing if the click originated from the image itself
+        if (event && event.target.tagName === 'IMG') {
+             return;
+        }
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    } 
     
     window.addEventListener('load', displayRandomCharm);
 
