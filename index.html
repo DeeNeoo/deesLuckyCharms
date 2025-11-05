@@ -3,64 +3,233 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dee's Lucky Charms Home Page</title>
+    <title>Dee's Lucky Charms | Handcrafted Lucky Jewelry & Spiritual Bracelets</title>
+    <meta name="description" content="Discover unique handcrafted charms and spiritual bracelets from Dee's Lucky Charms. Each piece brings luck, joy and positive energy. Ethically made in Johannesburg.">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
 
 
-  <!-- Header with a logo-->
   <header>
   
-    <div class="logo">
-    <a href="index.html">
-      <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="200" height="200">
-    </a>
-    </div>
+      <div class="logo">
+        <a href="index.html">
+       <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="200" height="200">
+        </a>
+      </div>
 
-    <p>Handcrafted Charms & jewellery Inspired by Luck and Joy ✨</p>
-
-    <!-- Navigation Bar, contails hyperlinks that aallow navigation from one web page to another -->
-    <nav>
+       <p>Handcrafted Charms & jewellery Inspired by Luck and Joy ✨</p>
+      
+    <nav id="topLinks">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li class="currentPage">Home</li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="contact_us.html">Contact</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
             <li><a href="Reviews.html">Reviews</a> </li>
         </ul>
+        </nav>
 
     </nav>
     </header>
 
-    <!--A brief introduction about the company-->
-    <!-- Main Content Area -->
     <main>
 
-        <section>
+      <section class="hero">
+        <div class="hero-text">
+          <a href="products.html" class="cta-btn" id="shopNowBtn">Shop Now</a>
+        </div>
+      </section>
+
+        <section id="welcomeSection">
             <h2>Welcome to Dee's Lucky Charms!</h2>
-            <p>Your one-stop shop for unique, handcrafted charms and jewellery that bring a touch of luck and joy to your life. Explore our collection of beautiful pieces designed to inspire and delight.</p>
+            <p id="introText">Your one-stop shop for unique, handcrafted charms and jewellery that bring a touch of luck and joy to your life. Explore our collection of beautiful pieces designed to inspire and delight.</p>
         </section>
+        
+        <section id="rotatingCharmSuggestion">
+            <h2>✨ Your Lucky Charm Suggestion ✨</h2>
+            <div id="charmDetails">
+                </div>
+        </section>
+        
         <section>
           <p>Dee's Lucky Charms is a small business dedicated to creating unique, handcrafted charms and jewellery that bring a touch of luck and joy to your life. Each piece is thoughtfully designed and made with care, ensuring that you receive a product that is not only beautiful but also meaningful. Whether you're looking for a special gift or a personal talisman, Dee's Lucky Charms has something for everyone. Explore our collection and find the perfect charm to inspire and delight you!</p>
         </section>
+    
+        
 
-        <div class="hero-container">
-        <img src="_images/heroShot.jpg" alt="Hero shot" class="hero-image">
-        </div>
-    </main>
+      <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+          <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+          <img class="lightbox-content" id="lightboxImg">
+          <div id="image-caption" class="caption"></div>
+      </div>
+
+</main>
   
 
-  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2024 Dee's Lucky Charms. All rights reserved.</p>
-    <p>Contact us: 0658 877 789 </p>
-    <p>Email: <a href="mailto:dee@gmail.com">deesluckycharms@gmail.com</a></p>
-    <p>Location: Sandton, Johannesburg</p>
+    <nav id="bottomLinks">
+        <ul>
+            <li class="currentPage">Home</li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="Reviews.html">Reviews</a> </li>
+        </ul>
+    </nav>
+    
+    <div id="footer-details">
+        <p>&copy; 2024 Dee's Lucky Charms. All rights reserved.</p>
+        <p>Contact us: 0658 877 789 </p>
+        <p>Email: <a href="mailto:dee@gmail.com">deesluckycharms@gmail.com</a></p>
+        <p>Location: Sandton, Johannesburg</p>
+    </div>
   </footer>
-</body>
-</html>
 
-                
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Back to 🔝</button>
+
+  <script>
+    
+    
+    const shopNowButton = document.getElementById('shopNowBtn');
+    
+    shopNowButton.addEventListener('click', function(event) {
+        alert('Taking you to the Products page! Find your perfect charm!');
+    });
+
+
+    
+    const introText = document.getElementById('introText');
+    const welcomeSection = document.getElementById('welcomeSection');
+
+    function animateWelcome() {
+       
+        introText.classList.add('welcome-text-active');
+        welcomeSection.classList.add('welcome-section-active');
+
+        setTimeout(() => {
+            introText.classList.remove('welcome-text-active');
+            welcomeSection.classList.remove('welcome-section-active');
+        }, 800);
+    }
+    
+    window.onload = animateWelcome;
+
+    
+
+    
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    }
+
+  
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    window.scrollToTop = scrollToTop;
+
+
+    
+    
+    const navLinks = document.querySelectorAll('#topLinks a');
+
+    
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', function() {
+        this.style.transform = 'rotate(-2deg)';
+        this.style.transition = 'transform 0.2s ease-out';
+      });
+
+      
+      link.addEventListener('mouseout', function() {
+        this.style.transform = 'rotate(0deg)';
+      });
+    });
+
+    
+    
+    const charmSuggestions = [
+        { name: "Thee White Howlite Bracelet", description: "Known as a calming stone, channels calm energy one bead at a time.", image: "_images/WhiteHowlite.jpg", link: "products.html#WhiteHowlite"},
+        { name: "Evil Eye Bracelet", description: "Wards off negativity, carry protection in style.", image: "_images/evileyeBracelet.jpg", link: "products.html#evileye"},
+        { name: "Tiger's Eye Bracelet", description: "This red Tiger's eye channels courage, focus and grounded energy.", image: "_images/tigersEye.png", link: "products.html#tigersEye"},
+        { name: "Chakra Bracelet", description: "Balances energy centers using 7 coloured beads.", image: "_images/chakra.png", link: "products.html#chakra"},
+        { name: "Citrine Bracelet", description: "This golden-yellow gemstone attracts positivity, abundance and confidence.", image: "_images/citrine.png", link: "products.html#citrine"},
+        { name: "Hematite Bracelet", description: "It aids grounding, balance and mental clarity.", image: "_images/Hematite.png", link: "products.html#Hematite"},
+        { name: "Pink Fusion Bracelet", description: "Luxury redefined in a shade of pink.", image: "_images/pinkFashionBracelet.jpg", link: "products.html#pinkFusion"},
+        { name: "Black Stone Bracelet", description: "A stylish blue bracelet with elephant charms.", image: "_images/customBlue.jpg", link: "products.html#blackStone"}
+    ];
+
+    function displayRandomCharm() {
+        const charmContainer = document.getElementById('charmDetails');
+        
+        
+        const randomIndex = Math.floor(Math.random() * charmSuggestions.length);
+        const charm = charmSuggestions[randomIndex];
+
+        const charmHTML = `
+            <div class="charm-text-content">
+                <h3 class="charm-suggestion-title">${charm.name}</h3>
+                <p class="charm-suggestion-description">${charm.description}</p>
+                <a href="${charm.link}" class="cta-btn">Discover More</a>
+            </div>
+            <div class="charm-image-content clickable-charm" onclick="openLightbox('${charm.image}', '${charm.name}', event)">
+                <img src="${charm.image}" alt="${charm.name}" class="charm-suggestion-img">
+            </div>
+        `;
+
+        
+        charmContainer.innerHTML = charmHTML;
+    }
+//the time (seconds) that the charm changes
+    displayRandomCharm();
+    setInterval(displayRandomCharm, 2000);
+
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const captionText = document.getElementById('image-caption');
+    
+    
+    window.openLightbox = function(imageSrc, caption, event) {
+        
+        if (event) {
+            event.stopPropagation();
+        }
+
+        lightboxImg.src = imageSrc;
+        lightboxImg.alt = caption;
+        captionText.innerHTML = caption; 
+        lightbox.style.display = 'block';
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    
+    window.closeLightbox = function(event) {
+        
+        if (event && event.target.tagName === 'IMG') {
+             return;
+        }
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; 
+    } 
+    
+    window.addEventListener('load', displayRandomCharm);
+
+  </script>
+</body>
+</html

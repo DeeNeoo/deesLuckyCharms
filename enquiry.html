@@ -2,74 +2,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dee's lucky charms Enquaries page</title>
+    <title>Enquire About Custom Charms | Dee's Lucky Charms</title>
+    <meta name="description" content="Submit enquiries for custom jewelry, volunteer opportunities or partnerships with Dee's Lucky Charms. Response within 24 hours.">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 
 <body>
 
-  <!-- Header -->
+
   <header>
     
       <a href="index.html">
         <img src="_images/Logo.png" alt="Dee's Lucky Charms Logo" width="200" height="200">
       </a>
-    <h1>Enquiry Form</h1>
     <p>Have a question about our charms or products? Send us an enquiry! ✨</p>
 
-  <!-- Navigation -->
-  <nav>
+  <nav id="topLinks">
     <ul>
-      <li><a href="index_homepage.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact_us.html">Contact</a></li>
-      <li><a href="enquiry.html">Enquiry</a></li>
+      <li class="currentPage">Enquiry</li>
       <li><a href="Reviews.html">Reviews</a> </li>
     </ul>
   </nav>
   </header>
   
 
-  <!-- Main content -->
-  <main>
+  <main id="enquiry">
     <p>All enquiries are responded to within 24 hours, only from Monday to Friday.</p>
+    
     <section>
       <h2>Enquiry Details</h2>
-      <form action="mailto:hello@deescharms.example" method="post" enctype="text/plain">
+      <form id="enquiryForm">
         <p>
-          <label for="fullname">Full Name:</label><br>
-          <input type="text" id="fullname" name="fullname" required>
+          <label for="fullname">Full Name (Min 3 chars):</label><br>
+          <input type="text" id="fullname" name="fullname" minlength="3" required>
+          <span id="fullnameError" class="error-message"></span>
         </p>
         <p>
           <label for="email">Email Address:</label><br>
           <input type="email" id="email" name="email" required>
+          <span id="emailError" class="error-message"></span>
         </p>
         <p>
-          <label for="subject">Subject:</label><br>
-          <input type="text" id="subject" name="subject" required>
+          <label for="phone">Phone Number (10 digits):</label><br>
+          <input type="tel" id="phone" name="phone" pattern="\d{10}" title="Phone number must be exactly 10 digits" required>
+          <span id="phoneError" class="error-message"></span>
         </p>
         <p>
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="6" cols="50" required></textarea>
+            <label for="enquiryType">Enquiry Type:</label><br>
+            <select id="enquiryType" name="enquiryType" required>
+                <option value="">-- Select Enquiry Type --</option>
+                <option value="Product/Service">Product/Service Information</option>
+                <option value="Volunteer">Volunteer Opportunities</option>
+                <option value="Sponsor">Sponsorship/Partnership</option>
+            </select>
+            <span id="enquiryTypeError" class="error-message"></span>
+        </p>
+        <p id="dateContainer">
+            <label for="preferredDate">Preferred Start Date (If Volunteer/Sponsor):</label><br>
+            <input type="date" id="preferredDate" name="preferredDate">
+            <span id="dateError" class="error-message"></span>
         </p>
         <p>
-          <input type="submit" value="Submit Enquiry">
+          <label for="message">Message (Max 500 chars):</label><br>
+          <textarea id="message" name="message" rows="6" cols="50" maxlength="500" required></textarea>
+          <span id="messageError" class="error-message"></span>
+        </p>
+        <p>
+          <button type="submit" id="submitEnquiryBtn">Submit Enquiry</button>
           <input type="reset" value="Clear">
         </p>
       </form>
     </section>
+    
+    <div id="enquiryResponse" style="display: none;"></div>
+
+    <br class="clearFix">
   </main>
 
-  <!-- Footer -->
+  <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Back to 🔝</button>
+
   <footer>
+
+     <nav id="bottomLinks">
+        <ul>
+            <li class="currentPage">Home</li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="Reviews.html">Reviews</a> </li>
+        </ul>
+        </nav>
+
+
     <address>
       Contact: <a href="dee@gmail.com">deesluckycharms@gmail.com</a><br>
       Sandton, Johannesburg
     </address>
     <p>© 2025 Dee's Lucky Charms</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const form = document.getElementById('enquiryForm');
+        const responseDiv = document.getElementById('enquiryResponse');
+        const enquiryTypeSelect = document.getElementById('enquiryType');
+        const preferredDateInput = document.getElementById('preferredDate');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            if (validateEnquiryForm()) {
+               
+                form.style.display = 'none';
+                responseDiv.style.display = 'block';
+                responseDiv.innerHTML = '<p style="text-align:center; font-size:1.2rem;">Processing your enquiry... Please wait.</p>';
+
+                
+                setTimeout(() => {
+                    simulateAjaxResponse();
+                }, 2000);
+            }
+        });
+
+        function validateEnquiryForm() {
+            let isValid = true;
+            
+            const fullname = document.getElementById('fullname');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const enquiryType = document.getElementById('enquiryType');
+            const preferredDate = document.getElementById('preferredDate');
+            const message = document.getElementById('message');
+
+           
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+            
+            if (fullname.value.trim().length < 3) {
+                document.getElementById('fullnameError').textContent = 'Full Name must be at least 3 characters.';
+                isValid = false;
+            }
+
+            
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value.trim())) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone.value.trim())) {
+                document.getElementById('phoneError').textContent = 'Phone number must be exactly 10 digits.';
+                isValid = false;
+            }
+
+            if (enquiryType.value === "") {
+                document.getElementById('enquiryTypeError').textContent = 'Please select an enquiry type.';
+                isValid = false;
+            }
+
+            
+            if (enquiryType.value === "Volunteer" || enquiryType.value === "Sponsor") {
+                if (preferredDate.value === "") {
+                    document.getElementById('dateError').textContent = 'A preferred date is required for this enquiry type.';
+                    isValid = false;
+                } else {
+                    const selectedDate = new Date(preferredDate.value);
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0); 
+                    
+                    if (selectedDate < today) {
+                        document.getElementById('dateError').textContent = 'The preferred date must be in the future.';
+                        isValid = false;
+                    }
+                }
+            }
+
+            
+            if (message.value.trim().length === 0) {
+                document.getElementById('messageError').textContent = 'Message content is required.';
+                isValid = false;
+            } 
+
+            return isValid;
+        }
+
+       
+        function simulateAjaxResponse() {
+            const type = enquiryTypeSelect.value;
+            const name = document.getElementById('fullname').value.split(' ')[0] || 'Client';
+            let responseHtml = `<h3>Thank you for your enquiry, ${name}!</h3>`;
+            
+            
+            if (type === "Product/Service") {
+                responseHtml += `<p>We have received your request for **Product/Service Information**. A team member will review your message and respond via email within 24 hours with cost and availability details for your desired charms.</p>`;
+            } else if (type === "Volunteer") {
+                const date = preferredDateInput.value;
+                const availability = date ? `We have immediate openings and will prioritize volunteers available around **${date}**.` : 'Our volunteer coordinator will contact you to discuss available shifts.';
+                responseHtml += `<p>Thank you for your interest in **Volunteering**! ${availability} We will be in touch shortly to schedule an introductory call to discuss the next steps.</p>`;
+            } else if (type === "Sponsor") {
+                 const date = preferredDateInput.value;
+                 const availability = date ? `We are currently reviewing proposals and will consider your request for a start date around **${date}**.` : 'We are currently reviewing proposals and will contact you.';
+                 responseHtml += `<p>Thank you for your interest in **Sponsorship**! ${availability} Our partnership manager will reach out within 48 hours with our latest sponsorship package details.</p>`;
+            } else {
+                responseHtml += `<p>Your general enquiry has been successfully submitted. We will respond within 24 hours.</p>`;
+            }
+
+            responseDiv.innerHTML = responseHtml + `<p style="margin-top: 1.5rem;"><a href="enquiry.html">Submit another enquiry</a></p>`;
+            responseDiv.classList.add('success-response');
+        }
+
+       
+        const mybutton = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        window.topFunction = function() {
+          document.body.scrollTop = 0; 
+          document.documentElement.scrollTop = 0; 
+        }
+    });
+  </script>
 
 </body>
 </html>

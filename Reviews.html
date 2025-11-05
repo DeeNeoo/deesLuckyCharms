@@ -2,10 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dee's lucky charms Reviews Page</title>
+    <title>Customer Reviews | Dee's Lucky Charms Testimonials</title>
+    <meta name="description" content="Read authentic customer reviews and testimonials for Dee's Lucky Charms. Share your experience with our handcrafted lucky jewelry and spiritual bracelets.">
     <link rel="stylesheet" href="styles.css">
-
-    
 </head>
 
 <header>
@@ -17,152 +16,257 @@
 
     <p>Handmade charm bracelets &amp; lucky gifts</p>
 
-    <nav>
+    <nav id="topLinks">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact_us.html">Contact</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
+        <li class="currentPage">Reviews</li>
         <li><a href="enquiry.html">Enquiry</a></li>
       </ul>
     </nav>
   </header>
 
 <body>
-  <main>
+
+  <main id="reviews">
     <section aria-labelledby="reviews-heading">
       <header>
         <h2 id="reviews-heading">Customer Reviews</h2>
-        <p>Read what customers say about our charms — and leave your own review below.</p>
+        <p>Read what customers say about our charms — and leave your own review below. ✨</p>
       </header>
 
-      <aside aria-labelledby="rating-summary">
-        <h3 id="rating-summary">Average rating</h3>
-        <p><strong>4.8</strong> out of 5 (based on 124 reviews)</p>
+      <aside aria-labelledby="review-carousel-heading">
+        <h3 id="review-carousel-heading">Featured Reviews</h3>
+        <div id="review-carousel-container">
+          <button id="prevBtn" aria-label="Previous Review">&lt;</button>
+          <div id="review-carousel" class="review-active">
+              </div>
+          <button id="nextBtn" aria-label="Next Review">&gt;</button>
+        </div>
+        <div class="indicator-container"></div>
       </aside>
-
-      <section aria-labelledby="leave-review-heading">
-        <header>
-          <h3 id="leave-review-heading">Leave a review</h3>
-          <p>Your honest feedback helps others and supports our small business.</p>
-        </header>
-
-        <form action="/submit-review" method="post" aria-labelledby="leave-review-heading">
-          <fieldset>
-            <legend>Reviewer details</legend>
-
-            <label for="name">Name
-              <input id="name" name="name" type="text" required placeholder="Your name" />
-            </label>
-
-            <label for="email">Email (will not be published)
-              <input id="email" name="email" type="email" required placeholder="you@example.com" />
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Review</legend>
-
-            <label for="product">Product (optional)
-              <input id="product" name="product" type="text" placeholder="e.g. Lucky Star Bracelet" />
-            </label>
-
-            <label for="rating">Rating
-              <input id="rating" name="rating" type="number" min="1" max="5" value="5" required aria-describedby="rating-help" />
-            </label>
-            <p id="rating-help">Enter a number between 1 (lowest) and 5 (highest).</p>
-
-            <label for="comment">Your review
-              <textarea id="comment" name="comment" rows="6" required placeholder="Tell us what you loved (or what we could improve)"></textarea>
-            </label>
-
-            <label for="consent">
-              <input id="consent" name="consent" type="checkbox" required />
-              I consent to my review being published with my first name.
-            </label>
-          </fieldset>
-
-          <p>
-            <button type="submit">Submit review</button>
-            <button type="reset">Reset</button>
-          </p>
-        </form>
-      </section>
-
-      <section aria-labelledby="reviews-list-heading">
-        <header>
-          <h3 id="reviews-list-heading">Recent reviews</h3>
-        </header>
-
-        <ol>
-          <li>
-            <article aria-labelledby="r1-title">
-              <header>
-                <h4 id="r1-title">Lovely bracelet and fast delivery</h4>
-                <p><strong>By:</strong> Alice — <strong>Product:</strong> Lucky Star Bracelet</p>
-              </header>
-
-              <figure>
-                <img src="_images/HOMEPAGE IMAGE.jpg" alt="Profile photo of Alice" width="100" height="100" />
-                <figcaption>Profile photo (optional)</figcaption>
-              </figure>
-
-              <p>Absolutely love the charm quality and the packaging was so cute. The bracelet fits perfectly.</p>
-
-              <footer>
-                <p><strong>Rating:</strong> 5 / 5</p>
-                <p><time datetime="2025-08-15">15 August 2025</time></p>
-              </footer>
-            </article>
-          </li>
-
-          <li>
-            <article aria-labelledby="r2-title">
-              <header>
-                <h4 id="r2-title">Great value</h4>
-                <p><strong>By:</strong> Thabo</p>
-              </header>
-
-              <p>Good craftsmanship, prompt replies to my questions — recommended for gifts.</p>
-
-              <footer>
-                <p><strong>Rating:</strong> 4 / 5</p>
-                <p><time datetime="2025-08-08">8 August 2025</time></p>
-              </footer>
-            </article>
-          </li>
-
-          <li>
-            <article aria-labelledby="r3-title">
-              <header>
-                <h4 id="r3-title">Exceeded expectations</h4>
-                <p><strong>By:</strong> Priya</p>
-              </header>
-
-              <p>The charms are delicate and exactly as pictured. The seller included a handwritten note — lovely touch!</p>
-
-              <footer>
-                <p><strong>Rating:</strong> 5 / 5</p>
-                <p><time datetime="2025-07-28">28 July 2025</time></p>
-              </footer>
-            </article>
-          </li>
-        </ol>
-      </section>
+      <br class="clearFix">
     </section>
+    
+    <section id="review-submission" aria-labelledby="review-form-heading">
+      <header>
+        <h3 id="review-form-heading">Leave Your Review</h3>
+        <p>Share your experience and let us know how we did! ✨</p>
+      </header>
+      <form id="reviewForm" action="#">
+        <p>
+          <label for="reviewName">Your Name:</label>
+          <input type="text" id="reviewName" name="reviewName" required minlength="3">
+        </p>
+        <p>
+          <label for="reviewEmail">Your Email:</label>
+          <input type="email" id="reviewEmail" name="reviewEmail" required>
+        </p>
+        
+        <div class="rating-box">
+            <label>Your Rating:</label>
+            <div id="star-rating" class="star-rating-area">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">&#9733;</label>
+                <span id="rating-text">Select a rating</span>
+            </div>
+        </div>
+
+        <p>
+          <label for="reviewMessage">Your Review (Max 500 chars):</label>
+          <textarea id="reviewMessage" name="reviewMessage" rows="5" maxlength="500" required></textarea>
+        </p>
+        
+        <p>
+          <button type="submit">Submit Review</button>
+        </p>
+      </form>
+    </section>
+
   </main>
 
   <footer>
-    <section aria-labelledby="contact-heading">
-      <h4 id="contact-heading">Contact</h4>
-      <address>
-        Dee's Lucky Charms — Sandton, Johannesburg<br />
-        <a href="dee@gmail.com">hello@deesluckcharms.example</a>
-      </address>
-    </section>
 
-    <p>&copy; <time datetime="2025">2025</time> Dee's Lucky Charms. All rights reserved.</p>
+    <nav id="bottomLinks">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+        </ul>
+        </nav>
+
+
+    <address>
+      Contact: <a href="deesluckycharms@gmail.com">deesluckycharms@gmail.com</a><br>
+      Sandton, Johannesburg
+      <p>There is currently no physical store. Only online orders.</p>
+    </address>
+    <p>© 2025 Dee's Lucky Charms</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reviews = [
+            { quote: "Absolutely love my new bracelet! It arrived quickly and the quality is fantastic. Highly recommend Dee's Lucky Charms!", author: "Tanya M.", image: "_images/review.jpg", rating: 3 },
+            { quote: "The charm is exactly as pictured, and the detail is amazing. It's a perfect gift. Will definitely buy again!", author: "Sipho D.", image: "_images/rev.jpg", rating: 4 },
+            { quote: "Great customer service and beautiful, unique products. My lucky charm brings me so much joy. Five stars!", author: "Lebo R.", image: "_images/reve.jpg", rating: 5 }
+        ];
+
+        let currentReviewIndex = 0;
+        let autoSlideInterval;
+
+        const reviewCarousel = document.getElementById('review-carousel');
+        const indicatorContainer = document.querySelector('.indicator-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function createIndicators() {
+            reviews.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('indicator-dot');
+                dot.addEventListener('click', () => showReview(index));
+                indicatorContainer.appendChild(dot);
+            });
+        }
+
+        function showReview(index) {
+            currentReviewIndex = (index + reviews.length) % reviews.length;
+            const review = reviews[currentReviewIndex];
+
+            reviewCarousel.classList.remove('review-active');
+            
+            setTimeout(() => {
+          
+            const starsHtml = '<div class="review-stars">' + 
+                              '&#9733;'.repeat(review.rating) + 
+                              '&#9734;'.repeat(5 - review.rating) + 
+                              '</div>';
+
+            reviewCarousel.innerHTML = `
+                <div class="review-header">
+                    <img src="${review.image}" alt="Product featured in review" class="review-image">
+                    ${starsHtml}
+                </div>
+                <p class="review-quote">${review.quote}</p>
+                <p class="review-author">— ${review.author}</p>
+            `;
+            reviewCarousel.classList.add('review-active');
+                
+                document.querySelectorAll('.indicator-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active-dot', i === currentReviewIndex);
+                });
+                
+            }, 300); 
+        }
+
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval); 
+            autoSlideInterval = setInterval(() => showReview(currentReviewIndex + 1), 6000); 
+        }
+
+        prevBtn.addEventListener('click', () => {
+            showReview(currentReviewIndex - 1);
+            startAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showReview(currentReviewIndex + 1);
+            startAutoSlide();
+        });
+
+        createIndicators();
+        showReview(0);
+        startAutoSlide();
+
+
+    
+    const starRating = document.getElementById('star-rating');
+    const ratingText = document.getElementById('rating-text');
+    const ratingInput = document.querySelectorAll('#star-rating input[name="rating"]');
+
+    const ratingMap = {
+        '5': 'Excellent!',
+        '4': 'Very Good',
+        '3': 'Good',
+        '2': 'Fair',
+        '1': 'Poor'
+    };
+
+    
+    starRating.addEventListener('mousemove', function(e) {
+        
+        if (e.target.tagName === 'LABEL') {
+            const starValue = e.target.previousElementSibling.value;
+            ratingText.textContent = ratingMap[starValue] || 'Select a rating';
+        }
+    });
+
+    
+    starRating.addEventListener('mouseleave', function() {
+        let checkedValue = null;
+        ratingInput.forEach(input => {
+            if (input.checked) {
+                checkedValue = input.value;
+            }
+        });
+        ratingText.textContent = checkedValue ? ratingMap[checkedValue] : 'Select a rating';
+    });
+
+    
+    ratingInput.forEach(input => {
+        input.addEventListener('change', function() {
+            ratingText.textContent = ratingMap[this.value];
+        });
+    });
+
+    
+    let initialChecked = false;
+    ratingInput.forEach(input => {
+        if (input.checked) {
+            ratingText.textContent = ratingMap[input.value];
+            initialChecked = true;
+        }
+    });
+    if (!initialChecked) {
+        ratingText.textContent = 'Select a rating';
+    }
+
+
+    
+    const reviewForm = document.getElementById('reviewForm');
+    reviewForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nameInput = document.getElementById('reviewName');
+        const rating = document.querySelector('#star-rating input[name="rating"]:checked');
+        
+        
+        if (nameInput.value.trim().length < 3 || document.getElementById('reviewEmail').value.trim() === '' || document.getElementById('reviewMessage').value.trim() === '') {
+             alert('Please fill out all required fields.');
+             return;
+        }
+
+        if (rating) {
+            alert(`Thank you, ${nameInput.value}! Your ${rating.value}-star review has been successfully submitted (simulated).`);
+            reviewForm.reset();
+            
+            ratingInput.forEach(input => input.checked = false);
+            ratingText.textContent = 'Select a rating'; 
+        } else {
+            alert('Please select a star rating.');
+        }
+    });
+    
+});
+  </script>
+
 </body>
 </html>
